@@ -1,14 +1,12 @@
 import Image from "next/image";
-import Link from "next/link";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { HeroMotion } from "@/components/motion/FadeIn";
 import { Cta } from "@/components/shared/editorial/Cta";
 import { Icon } from "@/components/shared/Icon";
 import home from "@/constants/home/content.json";
-import { servicePath } from "@/constants/routes";
-import { SERVICES } from "@/constants/services";
 import { WA } from "@/constants/whatsapp";
-import { emphasis, indexOf } from "@/utils/emphasis";
+import { ServiceMarquee } from "@/components/home/ServiceMarquee";
+import { emphasis } from "@/utils/emphasis";
 
 // Home cover: split editorial composition. Headline column on ivory; a tall arched photograph
 // (the lounge's mirror motif) with an inset image overlapping into the text column; the six
@@ -77,24 +75,7 @@ export function Cover() {
         </div>
       </div>
 
-      <nav aria-label="Service disciplines" className="border-t border-line">
-        <ul className="shell m-0 grid grid-cols-2 p-0 sm:grid-cols-3 lg:grid-cols-6">
-          {SERVICES.map((service, index) => (
-            <li
-              key={service.slug}
-              className="list-none border-line max-lg:border-b max-sm:odd:border-r sm:max-lg:[&:not(:nth-child(3n))]:border-r lg:border-r lg:last:border-r-0"
-            >
-              <Link
-                href={servicePath(service.slug)}
-                className="group flex h-full items-baseline gap-3 px-1 py-5 text-sm text-ink transition-colors hover:text-accent-deep sm:px-4 lg:first:pl-0"
-              >
-                <span className="type-label text-em">{indexOf(index + 1)}</span>
-                <span className="link-draw">{service.short}</span>
-              </Link>
-            </li>
-          ))}
-        </ul>
-      </nav>
+      <ServiceMarquee />
     </section>
   );
 }
