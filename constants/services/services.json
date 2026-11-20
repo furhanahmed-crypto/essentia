@@ -1,0 +1,374 @@
+[
+  {
+    "slug": "hair",
+    "name": "Hair",
+    "short": "Hair",
+    "summary": "Cuts, colour, styling, spa and advanced treatments for women and men — finished with care in our Attapur lounge.",
+    "about": "From everyday cuts to balayage, Olaplex and Nanoplastia, our hair studio balances classic craft with modern care. Whether you need a quick blast dry or a full colour transformation, we tailor every visit to your hair and lifestyle.",
+    "image": "/images/services/hair.jpg",
+    "image_secondary": "/images/services/hair-colour.jpg",
+    "imageAlt": "Stylist blow-drying a guest's hair with a round brush",
+    "imageSecondaryAlt": "Colourist painting highlights onto hair sectioned in foils",
+    "seoTitle": "Hair Services | Essentia — The Salon Lounge",
+    "seoDescription": "Women’s and men’s haircuts, colour, styling, spa and advanced treatments at Essentia — The Salon Lounge, Attapur.",
+    "groups": [
+      {
+        "title": "Women — Hair Cut",
+        "items": [
+          "Basic Hair-Cut (U & Straight)",
+          "Advanced Hair Cut",
+          "Fringe Cut",
+          "Kids Basic Hair Cut (Below Ten Years)",
+          "Advanced Kids Hair Cut",
+          "Hair Wash With Conditioning & Blast Dry"
+        ]
+      },
+      {
+        "title": "Women — Styling",
+        "note": "Available for short, medium and long hair",
+        "items": [
+          "Blow Dry",
+          "Tongs",
+          "Ironing",
+          "Crimping"
+        ]
+      },
+      {
+        "title": "Women — Colouring",
+        "note": "Global and fashion colour options by length",
+        "items": [
+          "Root Touchup",
+          "Ammonia Free Touchup",
+          "Global Colour (Basic)",
+          "Ammonia Free Global Colour (Basic)",
+          "Global Fashion Colour",
+          "Full Highlights",
+          "Per Streak",
+          "Balayage",
+          "Ombre"
+        ]
+      },
+      {
+        "title": "Women — Spa & Treatments",
+        "items": [
+          "Classic Hair Spa (L’Oréal)",
+          "Nashi Exclusive Hair Spa",
+          "Scalp Anti-Dandruff",
+          "Scalp Anti-Hairfall",
+          "Nashi Anti-Dandruff",
+          "Nashi Anti-Hairfall",
+          "Balance Scalp Treatment",
+          "Olaplex Addon",
+          "Olaplex Stand-Alone",
+          "Nashi Filler Therapy",
+          "Botox",
+          "Nanoplastia",
+          "Cysteine"
+        ]
+      },
+      {
+        "title": "Women — Textures & Massage",
+        "items": [
+          "Perming",
+          "Straightening",
+          "Head Massage Without Wash",
+          "Head Massage With Wash"
+        ]
+      },
+      {
+        "title": "Men — Hair Cut & Styling",
+        "items": [
+          "Basic Hair Cut (Kid & Men)",
+          "Advanced Hair Cut (Kid & Men)",
+          "Beard Trim",
+          "Beard Design",
+          "Shaving",
+          "Hair Wash With Conditioning",
+          "Ironing",
+          "Hair Styling Men"
+        ]
+      },
+      {
+        "title": "Men — Colouring",
+        "items": [
+          "Global Colouring (Basic)",
+          "Ammonia Free Hair Colour (Basic)",
+          "Fashion Colouring",
+          "Per Streak",
+          "Global Highlights",
+          "Beard Colouring",
+          "Moustache",
+          "Beard & Moustache"
+        ]
+      },
+      {
+        "title": "Men — Spa & Treatments",
+        "items": [
+          "Classic Hair Spa (L’Oréal)",
+          "Nashi Exclusive Hair Spa",
+          "Scalp Anti-Dandruff",
+          "Scalp Anti-Hairfall",
+          "Nashi Anti-Dandruff",
+          "Nashi Anti-Hairfall",
+          "Balance Scalp Treatment",
+          "Olaplex Addon",
+          "Olaplex Standalone",
+          "Nashi Filler Therapy",
+          "Botox",
+          "Nanoplastia",
+          "Perming",
+          "Straightening",
+          "Head Massage Without Wash",
+          "Head Massage With Wash"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "skin-care",
+    "name": "Skin Care",
+    "short": "Skin Care",
+    "summary": "Facials, Hydrafacial, Skeyndor protocols and signature cleanups for a clear, radiant complexion.",
+    "about": "Our skin desk pairs clinical-grade care with a calm lounge experience. Choose from Skeyndor facials, Hydrafacial infusions, glow rituals and Essentia signature cleanups — tailored to your skin goals.",
+    "image": "/images/services/skin.jpg",
+    "image_secondary": "/images/services/skin-massage.jpg",
+    "imageAlt": "Therapist brushing a nourishing mask onto a guest's face",
+    "imageSecondaryAlt": "Guest receiving a relaxing facial massage",
+    "seoTitle": "Skin Care & Facials | Essentia — The Salon Lounge",
+    "seoDescription": "Skeyndor facials, Hydrafacial, glow treatments and cleanups at Essentia — The Salon Lounge, Attapur.",
+    "groups": [
+      {
+        "title": "Skeyndor",
+        "items": [
+          "Aquatherma",
+          "Clear Balance",
+          "Power Oxygen",
+          "Power Hyaluronic",
+          "Vitamin-C Glow",
+          "Retinol",
+          "Corrective",
+          "Infusion Hydration (Men)"
+        ]
+      },
+      {
+        "title": "Hydrafacial",
+        "items": [
+          "Serum Infusion (Essentia Exclusive)",
+          "Algae Peel Off By Skeyndor",
+          "Vitamin-C Peel Off"
+        ]
+      },
+      {
+        "title": "Glow Your Face",
+        "items": [
+          "Skin Brightening",
+          "Skin Radiance",
+          "Signature Facial",
+          "O3 Luxury"
+        ]
+      },
+      {
+        "title": "Clean Up",
+        "items": [
+          "Classic Cleanup",
+          "Premium Cleanup",
+          "Purifying Cleanup (Skeyndor)",
+          "Essentia Signature Glow Cleanup"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "grooming",
+    "name": "Grooming",
+    "short": "Grooming",
+    "summary": "D-Tan, waxing, threading, polishing and thoughtful add-ons for everyday freshness.",
+    "about": "Grooming at Essentia covers the details that finish every look — from face and body D-Tan to Rica waxing, precise threading, polishing and piercings.",
+    "image": "/images/services/grooming.jpg",
+    "image_secondary": "/images/services/grooming-threading.jpg",
+    "imageAlt": "Barber trimming a full beard with scissors",
+    "imageSecondaryAlt": "Eyebrow shaping with thread",
+    "seoTitle": "Grooming Services | Essentia — The Salon Lounge",
+    "seoDescription": "D-Tan, waxing, threading, polishing and add-ons at Essentia — The Salon Lounge, Attapur.",
+    "groups": [
+      {
+        "title": "D-Tan",
+        "items": [
+          "Face & Neck (Classic)",
+          "Face & Neck (Premium)",
+          "Full Arms",
+          "Half Arms",
+          "Full Legs",
+          "Half Legs",
+          "Blouse Line",
+          "Mid Rif",
+          "Under Arms",
+          "Feet",
+          "Full Back",
+          "Full Body"
+        ]
+      },
+      {
+        "title": "Waxing",
+        "items": [
+          "Upper Lip",
+          "Chin",
+          "Under Arms",
+          "Side Face",
+          "Full Face",
+          "Full Bikini Wax"
+        ]
+      },
+      {
+        "title": "Rica Waxing",
+        "items": [
+          "Full Arms",
+          "Half Arms",
+          "Full Legs",
+          "Half Legs",
+          "Full Back",
+          "Half Back",
+          "Mid Rif",
+          "Full Body"
+        ]
+      },
+      {
+        "title": "Threading",
+        "items": [
+          "Eye Brows",
+          "Forehead",
+          "Upper Lip",
+          "Lower Lip",
+          "Chin",
+          "Side Locks",
+          "Full Face"
+        ]
+      },
+      {
+        "title": "Polishing",
+        "items": [
+          "Foot Polishing",
+          "Hand Polishing",
+          "Body Polishing"
+        ]
+      },
+      {
+        "title": "Pedicure & Manicure",
+        "note": "Classic, Coffee, Bubble Gum, Ice Cream and Signature options",
+        "items": [
+          "Classic",
+          "Coffee",
+          "Bubble Gum",
+          "Ice Cream",
+          "Signature"
+        ]
+      },
+      {
+        "title": "Add-On",
+        "items": [
+          "Foot Massage",
+          "Ear Piercing",
+          "Nose Piercing"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "nail",
+    "name": "Nail",
+    "short": "Nail",
+    "summary": "Cut & file, gel polish, art and extensions — polished finishes for fingers and toes.",
+    "about": "Our nail desk covers everyday maintenance through bridal-ready art and extensions. Choose gel polish, chrome and cateye finishes, acrylic or poly gel — finished with care.",
+    "image": "/images/services/nail.jpg",
+    "image_secondary": "/images/services/nail-gold.jpg",
+    "imageAlt": "Nail technician filing and shaping a guest's nails",
+    "imageSecondaryAlt": "Almond nails finished in metallic gold polish",
+    "seoTitle": "Nail Services | Essentia — The Salon Lounge",
+    "seoDescription": "Gel polish, nail art and extensions at Essentia — The Salon Lounge, Attapur.",
+    "groups": [
+      {
+        "title": "Nail Care",
+        "items": [
+          "Cut & File (Fingers)",
+          "Cut & File (Toes)",
+          "Cut & File (Fingers & Toes)",
+          "Regular Polish (Per Hand)",
+          "Gel Polish (Per Hand)",
+          "Gel Polish Removal (Per Hand)"
+        ]
+      },
+      {
+        "title": "Nail Art (Per Finger)",
+        "items": [
+          "Fingers & Toes (Basic)",
+          "Advanced (French, Glitter & Blooming Art)",
+          "Premium (Chrome, Ombre, Cateye & Bridal)"
+        ]
+      },
+      {
+        "title": "Nail Extensions",
+        "items": [
+          "Acrylic Extensions (Per Hand)",
+          "Gel Extensions (Per Hand)",
+          "Poly Gel Extensions (Per Hand)",
+          "Refilling For Single Hand With Polish",
+          "Extensions Removal (Per Hand)",
+          "Gel Overlay (Per Hand)"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "makeup",
+    "name": "Makeup",
+    "short": "Makeup",
+    "summary": "Party, bridal and groom makeup with hair styling and saree draping for every occasion.",
+    "about": "From light everyday glam to bridal and groom looks, our makeup artists build soft, camera-ready finishes. Pair your look with hair styling, saree draping or pleating.",
+    "image": "/images/services/makeup.jpg",
+    "image_secondary": "/images/services/makeup-bridal.jpg",
+    "imageAlt": "Makeup artist applying blush to a smiling guest",
+    "imageSecondaryAlt": "Bride in red with detailed bridal makeup and gold jewellery",
+    "seoTitle": "Makeup Services | Essentia — The Salon Lounge",
+    "seoDescription": "Bridal, party and groom makeup with hair styling at Essentia — The Salon Lounge, Attapur.",
+    "groups": [
+      {
+        "title": "Make-Up",
+        "items": [
+          "Eye Makeup",
+          "Hair Styling",
+          "Light Makeup",
+          "Bridal Makeup",
+          "Bridesmaid Makeup",
+          "Party Makeup",
+          "Saree Draping",
+          "Saree Pleating",
+          "Groom Makeup"
+        ]
+      }
+    ]
+  },
+  {
+    "slug": "semi-permanent-makeup",
+    "name": "Semi-Permanent Makeup",
+    "short": "Semi-Permanent Makeup",
+    "summary": "Microblading, BB Glow, derma planing and Essentia Glow Therapy for lasting refinement.",
+    "about": "Semi-permanent services for brows and glow — delivered with a careful consult so results feel natural and wear beautifully between visits.",
+    "image": "/images/services/brows.jpg",
+    "image_secondary": "/images/services/brows-detail.jpg",
+    "imageAlt": "Portrait with full, defined natural brows",
+    "imageSecondaryAlt": "Specialist refining an eyebrow shape with tweezers",
+    "seoTitle": "Semi-Permanent Makeup | Essentia — The Salon Lounge",
+    "seoDescription": "Microblading, BB Glow and glow therapy at Essentia — The Salon Lounge, Attapur.",
+    "groups": [
+      {
+        "title": "Semi Permanent Makeup",
+        "items": [
+          "Derma Planing",
+          "BB Glow (Per Session)",
+          "Microblading",
+          "Essentia Glow Therapy"
+        ]
+      }
+    ]
+  }
+]

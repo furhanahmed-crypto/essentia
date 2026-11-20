@@ -1,0 +1,19 @@
+{
+  "seoTitle": "Packages | Essentia — The Salon Lounge",
+  "label": "Packages · Curated sets",
+  "title": "Packages, *without* the guesswork.",
+  "lead": "Female and male grooming sets, plus pre-bridal and groom journeys. Inclusions are listed below — ask us for current pricing.",
+  "everyday": {
+    "label": "Everyday sets",
+    "title": "Polish, *bundled*.",
+    "lede": "Combinations our guests book again and again — one visit, nothing forgotten."
+  },
+  "occasion": {
+    "label": "Occasion rituals",
+    "images": {
+      "pre-bridal": { "src": "/images/rituals/bride.jpg", "alt": "Bride in red and gold bridal wear with jewellery and henna", "position": "50% 30%" },
+      "groom": { "src": "/images/rituals/groom.jpg", "alt": "Groom in an ivory sherwani and turban at his wedding", "position": "50% 25%" }
+    }
+  },
+  "enquire": "Enquire about packages"
+}

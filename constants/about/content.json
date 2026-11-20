@@ -1,0 +1,34 @@
+{
+  "hero": {
+    "crumb": "About",
+    "label": "About · The Salon Lounge",
+    "title": "A lounge built for *considered* care.",
+    "lede": "Essentia — The Salon Lounge is a premium unisex salon in Attapur, Hyderabad, bringing hair, skin, grooming, nails and makeup together in one calm, well-lit space.",
+    "image": "/images/atmosphere/wash.jpg",
+    "imageAlt": "Guest relaxing at the backwash while a stylist rinses her hair",
+    "imagePosition": "50% 40%"
+  },
+  "story": {
+    "label": "Our story",
+    "title": "Where craft meets *comfort*.",
+    "body": [
+      "Our name is a promise: essential care, done exceptionally. From everyday cuts to Hydrafacials, microblading and bridal journeys, every service is delivered with the same quiet standard — no average finishes.",
+      "Guests come for the craft and stay for the atmosphere: soft seating, thoughtful lighting and a team that listens before it styles."
+    ],
+    "pullQuote": "A team that listens before it styles.",
+    "image": "/images/atmosphere/bottles.jpg",
+    "imageAlt": "Amber bottles of professional hair and skin care",
+    "secondaryImage": "/images/about/salon-detail.jpg",
+    "secondaryImageAlt": "Essentia lounge detail with arched gold mirrors and white vanities"
+  },
+  "mission": {
+    "label": "Our promise",
+    "title": "We don’t do average, *we do awesome.*",
+    "lead": "Quality products, skilled hands and a lounge experience that respects your time.",
+    "points": [
+      "Unisex expertise across hair, skin and grooming",
+      "Signature packages for bridal and groom journeys",
+      "A calm Attapur address that is easy to find"
+    ]
+  }
+}

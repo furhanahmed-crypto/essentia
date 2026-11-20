@@ -1,0 +1,39 @@
+{
+  "name": "Essentia",
+  "fullName": "Essentia — The Salon Lounge",
+  "tagline": "We Don't Do Average, We Do Awesome!",
+  "positioning": "Premium Unisex Salon",
+  "description": "Essentia — The Salon Lounge is a premium unisex salon in Attapur offering hair, skin care, grooming, nails, makeup and signature packages.",
+  "url": "https://www.theessentiasalon.com",
+  "locale": "en_IN",
+  "phone": "+91 9644 38 38 38",
+  "phoneHref": "tel:+919644383838",
+  "email": "support@theessentiasalon.com",
+  "emailHref": "mailto:support@theessentiasalon.com",
+  "whatsapp": "https://wa.me/919644383838?text=Hi%2C%20I%27d%20like%20to%20know%20more%20about%20Essentia%20services.",
+  "hoursLine": "Mon–Sun · By appointment",
+  "address": {
+    "street": "Pillar No. 160, Attapur",
+    "locality": "Hyderabad",
+    "region": "Telangana",
+    "country": "India"
+  },
+  "addressLine": "Pillar No. 160, Attapur, Hyderabad",
+  "socials": {
+    "instagram": "https://www.instagram.com/essentiasalonlounge/"
+  },
+  "logo": "/images/logo/logo-horizontal-dark.png",
+  "logoLight": "/images/logo/logo-horizontal.png",
+  "logoMark": "/images/logo/logo-mark-dark.png",
+  "shareImage": "/images/og/essentia-share.jpg",
+  "shareImageAlt": "Essentia — The Salon Lounge",
+  "themeColor": "#79A797",
+  "backgroundColor": "#EEEAE4",
+  "colors": {
+    "mutedSage": "#79A797",
+    "warmIvory": "#EEEAE4",
+    "charcoal": "#343330",
+    "softCream": "#F8F6F2",
+    "paleSage": "#D8E3DC"
+  }
+}

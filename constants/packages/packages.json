@@ -1,0 +1,102 @@
+[
+  {
+    "id": "female-grooming",
+    "audience": "Female",
+    "category": "Grooming Packages",
+    "name": "Female Grooming Packages",
+    "summary": "Curated combinations for a polished, ready-to-go finish.",
+    "items": [
+      { "name": "Haircut & Hair Spa", "includes": ["Haircut", "Hair Spa"] },
+      { "name": "Pedicure + Manicure + Gel Polish", "includes": ["Pedicure", "Manicure", "Gel Polish", "Coffee Hands"] },
+      { "name": "Wax + Threading + Cleanup", "includes": ["Wax", "Threading", "Cleanup"] },
+      { "name": "Threading + D-Tan + Cleanup", "includes": ["Threading", "D-Tan", "Cleanup"] },
+      { "name": "Wax + Threading + Facial", "includes": ["Wax", "Threading", "Facial"] }
+    ]
+  },
+  {
+    "id": "male-grooming",
+    "audience": "Male",
+    "category": "Grooming Packages",
+    "name": "Male Grooming Packages",
+    "summary": "Efficient grooming sets for hair, beard and skin.",
+    "items": [
+      { "name": "Hair Cut + Beard + Hair Color", "includes": ["Hair Cut", "Beard", "Hair Color"] },
+      { "name": "Hair Cut + Beard + D-Tan or Head Massage", "includes": ["Hair Cut", "Beard", "D-Tan or Head Massage"] },
+      { "name": "Hair Cut + Hair Spa + Cleanup", "includes": ["Hair Cut", "Hair Spa", "Cleanup"] },
+      { "name": "Hair Cut + Beard + Cleanup", "includes": ["Hair Cut", "Beard", "Cleanup"] }
+    ]
+  },
+  {
+    "id": "pre-bridal",
+    "audience": "Bride",
+    "category": "Pre Bridal Packages",
+    "name": "Pre Bridal Packages",
+    "summary": "Classic, Premium and Signature journeys for the weeks before your day.",
+    "tiers": [
+      {
+        "name": "Classic",
+        "includes": [
+          "Facial — Skin Brightening / Radiance",
+          "Wax — Full Legs, Full Arms & Underarms",
+          "D-Tan — Face & Neck, Full Legs & Full Arms",
+          "Pedicure & Manicure — Classic",
+          "Hair — Hair Spa & Hair Cut",
+          "Threading"
+        ]
+      },
+      {
+        "name": "Premium",
+        "includes": [
+          "Facial — O3 / Skeyndor",
+          "Wax — Full Body",
+          "D-Tan — Full Body",
+          "Pedicure & Manicure — Ice Cream",
+          "Hair — Hair Spa (Nashi) & Hair Cut",
+          "Threading"
+        ]
+      },
+      {
+        "name": "Signature",
+        "includes": [
+          "Facial — Hydrafacial",
+          "Wax — Full Body",
+          "D-Tan — Full Body",
+          "Polishing — Full Body",
+          "Hair — Hair Spa (Olaplex) & Hair Cut",
+          "Pedicure & Manicure — Signature",
+          "Threading"
+        ]
+      }
+    ]
+  },
+  {
+    "id": "groom",
+    "audience": "Groom",
+    "category": "Groom Packages",
+    "name": "Groom Packages",
+    "summary": "Classic and Premium sets so the groom looks camera-ready.",
+    "tiers": [
+      {
+        "name": "Classic",
+        "includes": [
+          "Facial — Skin Brightening / Radiance",
+          "D-Tan — Face & Neck (Classic)",
+          "Hair — Hair Spa & Hair Cut",
+          "Shave / Beard Trim",
+          "Pedicure & Manicure — Classic"
+        ]
+      },
+      {
+        "name": "Premium",
+        "includes": [
+          "Facial — Hydra / Skeyndor",
+          "D-Tan — Face & Neck (Premium)",
+          "Hair — Advanced Hair Cut",
+          "Beard Design",
+          "Hair Spa / Hair Colour",
+          "Pedicure & Manicure — Signature"
+        ]
+      }
+    ]
+  }
+]

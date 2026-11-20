@@ -1,0 +1,41 @@
+import brand from "@/brand.json";
+
+/** Brand manifest — single source of truth from root brand.json. */
+export const BRAND = {
+  name: brand.name,
+  fullName: brand.fullName,
+  tagline: brand.tagline,
+  positioning: brand.positioning,
+  description: brand.description,
+  url: brand.url,
+  locale: brand.locale,
+  phone: brand.phone,
+  phoneHref: brand.phoneHref,
+  email: brand.email,
+  emailHref: brand.emailHref,
+  whatsapp: brand.whatsapp,
+  hoursLine: brand.hoursLine,
+  address: brand.address,
+  addressLine: brand.addressLine,
+  presence: brand.addressLine,
+  locationsNote: brand.positioning,
+  headOperations: brand.addressLine,
+  origins: [brand.addressLine] as string[],
+  addresses: [
+    {
+      street: brand.address.street,
+      locality: brand.address.locality,
+      region: brand.address.region,
+    },
+  ],
+  socials: brand.socials,
+  disclaimer: "Premium unisex salon services. Packages and treatments subject to consultation.",
+  logo: brand.logo,
+  logoLight: brand.logoLight,
+  logoMark: brand.logoMark,
+  shareImage: brand.shareImage,
+  shareImageAlt: brand.shareImageAlt,
+  themeColor: brand.themeColor,
+  backgroundColor: brand.backgroundColor,
+  colors: brand.colors,
+} as const;
