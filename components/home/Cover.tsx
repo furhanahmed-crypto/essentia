@@ -15,8 +15,8 @@ export function Cover() {
   const { cover } = home;
   return (
     <section aria-labelledby="cover-title" className="relative overflow-hidden bg-background">
-      <div className="shell grid gap-12 pt-10 pb-14 md:pt-14 lg:grid-cols-12 lg:gap-8 lg:pt-16 lg:pb-20">
-        <div className="relative z-10 flex flex-col justify-between gap-10 lg:col-span-6 lg:py-8">
+      <div className="shell grid gap-12 pt-10 pb-14 md:pt-14 lg:min-h-[calc(100svh-var(--header-h)-6rem)] lg:grid-cols-12 lg:items-center lg:gap-8 lg:py-6">
+        <div className="relative z-10 flex flex-col justify-between gap-10 lg:col-span-7 lg:gap-8">
           <HeroMotion>
             <p className="m-0 type-label flex items-center gap-3 text-ink/70">
               <span aria-hidden className="h-px w-10 bg-primary" />
@@ -25,14 +25,14 @@ export function Cover() {
           </HeroMotion>
           <div>
             <HeroMotion delay={0.12}>
-              <h1 id="cover-title" className="m-0 type-display text-ink">
+              <h1 id="cover-title" className="m-0 type-cover text-ink">
                 {emphasis(cover.title)}
               </h1>
             </HeroMotion>
             <HeroMotion delay={0.28}>
-              <p className="mt-8 mb-0 max-w-md type-lede text-text">{cover.lede}</p>
+              <p className="mt-5 mb-0 max-w-md type-lede text-text">{cover.lede}</p>
             </HeroMotion>
-            <HeroMotion delay={0.4} className="mt-10 flex flex-wrap items-center gap-x-8 gap-y-5">
+            <HeroMotion delay={0.4} className="mt-7 flex flex-wrap items-center gap-x-8 gap-y-5">
               <Cta href={cover.primaryCta.href}>{cover.primaryCta.label}</Cta>
               <Cta href={WA.home} variant="line" external icon={<Icon icon={faWhatsapp} className="text-base" />}>
                 {cover.secondaryCta.label}
@@ -41,8 +41,8 @@ export function Cover() {
           </div>
         </div>
 
-        <div className="relative lg:col-span-6 lg:pl-8">
-          <div className="relative mx-auto aspect-[4/5] w-full max-w-[560px] sm:aspect-[3/4]">
+        <div className="relative lg:col-span-5 lg:py-5 lg:pl-4">
+          <div className="relative mx-auto aspect-[4/5] w-full max-w-[560px] sm:aspect-[3/4] lg:h-[clamp(420px,calc(100svh-var(--header-h)-11.5rem),680px)] lg:w-auto lg:max-w-none">
             <div className="mask-in arch absolute inset-0 bg-mist" style={{ animationDelay: "0.15s" }}>
               <div className="absolute inset-0">
                 <Image
@@ -61,7 +61,7 @@ export function Cover() {
               className="pointer-events-none absolute -inset-3 arch border border-primary/45 sm:-inset-4"
             />
             <div
-              className="mask-in absolute -bottom-8 -left-4 aspect-[3/4] w-[34%] border-[6px] border-background sm:-left-10 lg:-left-24"
+              className="mask-in absolute -bottom-4 -left-4 aspect-[3/4] w-[34%] border-[6px] border-background sm:-left-10 lg:-left-24"
               style={{ animationDelay: "0.7s" }}
             >
               <div className="absolute inset-0">

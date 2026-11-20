@@ -9,21 +9,21 @@ export function ServiceMarquee() {
     SERVICES.map((service) => (
       <li key={service.slug} className="flex shrink-0 list-none items-center">
         {copy ? (
-          <span className="px-8 font-heading text-3xl sm:text-4xl md:px-12 md:text-5xl">{service.short}</span>
+          <span className="px-6 font-heading text-[1.3rem] leading-none sm:text-[1.6rem] md:px-8 md:text-[2.1rem]">{service.short}</span>
         ) : (
           <Link
             href={servicePath(service.slug)}
-            className="px-8 font-heading text-3xl transition-opacity hover:opacity-70 focus-visible:underline sm:text-4xl md:px-12 md:text-5xl"
+            className="px-6 font-heading text-[1.3rem] leading-none transition-opacity hover:opacity-70 focus-visible:underline sm:text-[1.6rem] md:px-8 md:text-[2.1rem]"
           >
             {service.short}
           </Link>
         )}
-        <span aria-hidden className="text-xl opacity-80">✦</span>
+        <span aria-hidden className="text-sm opacity-80">✦</span>
       </li>
     ));
 
   return (
-    <nav aria-label="Service disciplines" className="marquee overflow-hidden bg-primary py-7 text-white md:py-9 dark:text-night">
+    <nav aria-label="Service disciplines" className="marquee overflow-hidden bg-primary py-5 text-white md:py-6 dark:text-night">
       <ul className="marquee-track m-0 flex w-max p-0">
         {set(false)}
         <li aria-hidden className="marquee-copy contents">
