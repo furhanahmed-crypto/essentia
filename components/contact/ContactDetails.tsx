@@ -24,9 +24,15 @@ export function ContactDetails() {
         {details.label}
       </Label>
       <p className="mt-10 mb-0 type-label text-ink/60">{details.callLabel}</p>
-      <a href={BRAND.phoneHref} className="mt-3 block type-title text-ink transition-colors hover:text-accent-deep">
-        {BRAND.phone}
-      </a>
+      {/* Sized from the column width (cqw) and never wrapped, so the number always stays on one line. */}
+      <div className="@container mt-3">
+        <a
+          href={BRAND.phoneHref}
+          className="block font-heading text-[min(8.6cqw,4rem)] leading-tight tracking-tight whitespace-nowrap text-ink transition-colors hover:text-accent-deep"
+        >
+          {BRAND.phone}
+        </a>
+      </div>
       <dl className="mt-12 mb-0 border-t border-line">
         {rows.map((row) => (
           <div key={row.label} className="grid gap-1 border-b border-line py-5 sm:grid-cols-[9rem_minmax(0,1fr)]">
