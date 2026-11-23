@@ -16,7 +16,7 @@ interface MobileMenuProps {
   onClose: () => void;
 }
 
-// Full-screen menu below the header bar (phones and tablets): oversized numbered links, the six
+// Full-screen menu below the header bar (phones and tablets): oversized numbered links, the five
 // disciplines, and direct contact. Locks page scroll while open; Escape closes it.
 export function MobileMenu({ open, onClose }: MobileMenuProps) {
   const pathname = usePathname();

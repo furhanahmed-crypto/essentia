@@ -17,7 +17,6 @@ export const SERVICE_NAV = [
   { label: "Grooming", href: servicePath("grooming") },
   { label: "Nail", href: servicePath("nail") },
   { label: "Makeup", href: servicePath("makeup") },
-  { label: "Semi-Permanent Makeup", href: servicePath("semi-permanent-makeup") },
 ] as const;
 
 export const NAV_LINKS: NavLink[] = [

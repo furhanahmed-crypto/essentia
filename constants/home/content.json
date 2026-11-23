@@ -15,13 +15,13 @@
     "label": "The lounge",
     "before": "One calm address for",
     "chips": [
-      { "word": "hair,", "image": "/images/lookbook/knot.jpg" },
-      { "word": "skin,", "image": "/images/lookbook/mask.jpg" },
-      { "word": "nails", "image": "/images/lookbook/french.jpg" }
+      { "word": "hair,", "image": "/images/lookbook/ig-01.jpg" },
+      { "word": "skin,", "image": "/images/lookbook/ig-05.jpg" },
+      { "word": "nails", "image": "/images/lookbook/ig-03.jpg" }
     ],
     "after": "and the finishing touches — because essential care deserves *exceptional* hands.",
     "facts": [
-      { "value": "06", "label": "Service disciplines under one roof" },
+      { "value": "05", "label": "Service disciplines under one roof" },
       { "value": "Unisex", "label": "Considered care for women and men" },
       { "value": "7 days", "label": "Open by appointment, Mon–Sun" }
     ],
@@ -29,23 +29,23 @@
   },
   "menu": {
     "label": "The Menu",
-    "title": "Six disciplines, *one* standard.",
+    "title": "Five disciplines, *one* standard.",
     "lede": "Every family of treatments has its own specialists, products and pace. Choose where to begin.",
     "cta": { "label": "All services", "href": "/services" }
   },
   "lookbook": {
     "label": "In the chair",
     "title": "Recent *finishes*",
-    "lede": "A glimpse of the work — swipe through the lookbook.",
+    "lede": "Real finishes from the lounge — photos and reels from our chair.",
     "items": [
-      { "image": "/images/lookbook/curls.jpg", "alt": "Stylist curling long brown hair with a curling wand", "caption": "Soft curls", "service": "hair", "ratio": "tall" },
-      { "image": "/images/lookbook/mask.jpg", "alt": "Guest relaxing with a cream face mask during a facial", "caption": "Glow facial", "service": "skin-care", "ratio": "wide" },
-      { "image": "/images/lookbook/fade.jpg", "alt": "Barber shaping a skin fade and beard line", "caption": "Fade & beard design", "service": "grooming", "ratio": "tall" },
-      { "image": "/images/lookbook/french.jpg", "alt": "French manicure holding a small daisy", "caption": "Classic French", "service": "nail", "ratio": "square" },
-      { "image": "/images/lookbook/bridal-glam.jpg", "alt": "Bride with jewelled nose ring and rose-toned bridal makeup", "caption": "Bridal glam", "service": "makeup", "ratio": "tall" },
-      { "image": "/images/lookbook/knot.jpg", "alt": "Auburn hair with soft waves twisted into a loose knot", "caption": "Copper colour", "service": "hair", "ratio": "square" },
-      { "image": "/images/lookbook/lashes.jpg", "alt": "Makeup artist sweeping shimmer across a closed eyelid", "caption": "Evening eyes", "service": "makeup", "ratio": "tall" },
-      { "image": "/images/lookbook/updo.jpg", "alt": "Stylist pinning an elegant updo in a bright salon", "caption": "Occasion updo", "service": "hair", "ratio": "tall" }
+      { "image": "/images/lookbook/ig-01.jpg", "alt": "Guest after a permanent blowdry at Essentia Salon Lounge", "caption": "Permanent blowdry", "service": "hair", "ratio": "tall" },
+      { "video": "/videos/instagram/reel-01.mp4", "image": "/images/lookbook/ig-04.jpg", "alt": "Reel — frizzy hair transformed with a permanent blowdry", "caption": "Smooth transformation", "service": "hair", "ratio": "tall" },
+      { "image": "/images/lookbook/ig-02.jpg", "alt": "Client in the Essentia lounge sharing her finish", "caption": "Lounge finish", "service": "hair", "ratio": "tall" },
+      { "video": "/videos/instagram/reel-02.mp4", "image": "/images/lookbook/ig-02.jpg", "alt": "Reel — wedding glow-up at Essentia", "caption": "Wedding glow-up", "service": "makeup", "ratio": "tall" },
+      { "image": "/images/lookbook/ig-05.jpg", "alt": "Layered blowdry finish seen from behind in the salon chair", "caption": "Cut & style", "service": "hair", "ratio": "tall" },
+      { "video": "/videos/instagram/reel-03.mp4", "image": "/images/lookbook/ig-03.jpg", "alt": "Reel — fresh look with the right details at Essentia", "caption": "Fresh details", "service": "hair", "ratio": "tall" },
+      { "image": "/images/lookbook/ig-07.jpg", "alt": "Glossy permanent blowdry curls in the Essentia chair", "caption": "Gloss & body", "service": "hair", "ratio": "tall" },
+      { "video": "/videos/instagram/reel-04.mp4", "image": "/images/lookbook/ig-07.jpg", "alt": "Reel — every strand cared for at Essentia", "caption": "Strand care", "service": "hair", "ratio": "tall" }
     ]
   },
   "rituals": {

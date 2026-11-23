@@ -7,7 +7,7 @@ import home from "@/constants/home/content.json";
 import { SERVICES, treatmentCount } from "@/constants/services";
 import { emphasis } from "@/utils/emphasis";
 
-// "The Menu": the six service families as large numbered rows. The heading column stays pinned
+// "The Menu": the five service families as large numbered rows. The heading column stays pinned
 // while the list scrolls; hovering or focusing a row brings up that discipline's photograph.
 export function MenuIndex() {
   const { menu } = home;

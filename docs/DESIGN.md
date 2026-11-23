@@ -61,10 +61,10 @@ Utilities: `type-display`, `type-title`, `type-heading`, `type-label`, `type-led
 
 **Home**
 1. *Cover* — split: headline + lede on ivory, tall arched photograph with an overlapping
-   inset image, index of the six disciplines along the bottom edge.
+   inset image, index of the five disciplines along the bottom edge.
 2. *Statement* — full-width manifesto sentence with small inline arch images, then three facts
    divided by vertical rules.
-3. *The Menu* — sticky heading left; six large numbered rows right; hover previews the photo.
+3. *The Menu* — sticky heading left; five large numbered rows right; hover previews the photo.
 4. *Lookbook* — pale-sage band, horizontal strip of mixed-ratio photographs with captions.
 5. *Rituals* — packages teaser: arched bridal photograph beside a ledger of collections.
 6. *The Lounge* — night band: the real salon interior, four principles (I–IV), and the visit in
@@ -76,7 +76,7 @@ Utilities: `type-display`, `type-title`, `type-heading`, `type-label`, `type-led
 **Inner pages** open with `PageHero` (breadcrumb, label, oversized title, lede, optional
 cinematic photo strip) instead of a dark photo banner.
 
-- *Services* — asymmetric editorial grid of six chapters with varied spans and ratios.
+- *Services* — asymmetric editorial grid of five chapters with varied spans and ratios.
 - *Service detail* — overview with a two-photo collage; treatments laid out like a printed menu
   with a sticky group index; "next chapters" row.
 - *Packages* — everyday sets as a two-column ledger (her / him); occasion rituals as tier

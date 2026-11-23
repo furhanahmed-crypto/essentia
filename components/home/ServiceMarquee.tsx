@@ -2,7 +2,7 @@ import Link from "next/link";
 import { servicePath } from "@/constants/routes";
 import { SERVICES } from "@/constants/services";
 
-// Sage band under the cover: the six disciplines scroll endlessly, each a link to its chapter.
+// Sage band under the cover: the five disciplines scroll endlessly, each a link to its chapter.
 // The second set is a visual copy (hidden from assistive tech and the tab order). Pauses on hover.
 export function ServiceMarquee() {
   const set = (copy: boolean) =>

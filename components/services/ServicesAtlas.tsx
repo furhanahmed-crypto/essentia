@@ -18,7 +18,7 @@ const LAYOUT = [
   { cell: "lg:col-span-5 lg:col-start-8 lg:mt-40", frame: "aspect-[4/3]" },
 ] as const;
 
-// Services index: the six families as editorial "chapters" on an asymmetric grid.
+// Services index: the five families as editorial "chapters" on an asymmetric grid.
 export function ServicesAtlas() {
   return (
     <section aria-label="Service families" className="bg-background pt-10 pb-24 md:pb-32">

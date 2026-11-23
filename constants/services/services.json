@@ -346,29 +346,5 @@
         ]
       }
     ]
-  },
-  {
-    "slug": "semi-permanent-makeup",
-    "name": "Semi-Permanent Makeup",
-    "short": "Semi-Permanent Makeup",
-    "summary": "Microblading, BB Glow, derma planing and Essentia Glow Therapy for lasting refinement.",
-    "about": "Semi-permanent services for brows and glow — delivered with a careful consult so results feel natural and wear beautifully between visits.",
-    "image": "/images/services/brows.jpg",
-    "image_secondary": "/images/services/brows-detail.jpg",
-    "imageAlt": "Portrait with full, defined natural brows",
-    "imageSecondaryAlt": "Specialist refining an eyebrow shape with tweezers",
-    "seoTitle": "Semi-Permanent Makeup | Essentia — The Salon Lounge",
-    "seoDescription": "Microblading, BB Glow and glow therapy at Essentia — The Salon Lounge, Attapur.",
-    "groups": [
-      {
-        "title": "Semi Permanent Makeup",
-        "items": [
-          "Derma Planing",
-          "BB Glow (Per Session)",
-          "Microblading",
-          "Essentia Glow Therapy"
-        ]
-      }
-    ]
   }
 ]

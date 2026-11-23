@@ -1,7 +1,7 @@
 import services from "@/constants/services/services.json";
 import type { ServiceCategory } from "@/types/services";
 
-/** The six service families in menu order (centralised data in services.json). */
+/** The five service families in menu order (centralised data in services.json). */
 export const SERVICES: readonly ServiceCategory[] = services;
 
 export const findService = (slug: string): ServiceCategory | undefined =>
