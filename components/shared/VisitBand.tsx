@@ -6,7 +6,6 @@ import { Cta } from "@/components/shared/editorial/Cta";
 import { Icon } from "@/components/shared/Icon";
 import { BRAND } from "@/constants/brand";
 import home from "@/constants/home/content.json";
-import { ROUTES } from "@/constants/routes";
 import { whatsappLink, whatsappMessageFor } from "@/constants/whatsapp";
 import { emphasis } from "@/utils/emphasis";
 
@@ -53,14 +52,15 @@ export function VisitBand({ pathname }: { pathname: string }) {
             ))}
           </dl>
           <div className="mt-10 flex flex-wrap gap-4">
-            <Cta href={ROUTES.contact}>Plan a visit</Cta>
             <Cta
               href={whatsappLink(whatsappMessageFor(pathname))}
-              variant="outline"
               external
               icon={<Icon icon={faWhatsapp} className="text-base" />}
             >
-              WhatsApp
+              Plan a visit
+            </Cta>
+            <Cta href={BRAND.phoneHref} variant="outline">
+              Call us
             </Cta>
           </div>
         </div>

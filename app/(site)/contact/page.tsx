@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { ContactDetails } from "@/components/contact/ContactDetails";
-import { ContactForm } from "@/components/contact/ContactForm";
+import { ContactEnquire } from "@/components/contact/ContactEnquire";
 import { PageHero } from "@/components/layout/PageHero";
 import { Band } from "@/components/shared/editorial/Band";
 import content from "@/constants/contact/content.json";
@@ -25,7 +25,7 @@ export default function ContactPage() {
             <ContactDetails />
           </div>
           <div className="lg:col-span-6 lg:col-start-7">
-            <ContactForm />
+            <ContactEnquire />
           </div>
         </div>
       </Band>

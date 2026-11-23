@@ -9,6 +9,7 @@ import { useScrolled } from "@/hooks/useScrolled";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { BRAND } from "@/constants/brand";
 import { NAV_LEFT, ROUTES } from "@/constants/routes";
+import { WA } from "@/constants/whatsapp";
 import { MobileMenu } from "./header/MobileMenu";
 import { NavLinks } from "./header/NavLinks";
 
@@ -58,13 +59,14 @@ export function SiteHeader() {
           <div className="flex items-center justify-end gap-2 lg:gap-6">
             <NavLinks links={[{ label: "Contact", href: ROUTES.contact }]} className="hidden lg:flex" />
             <ThemeToggle />
-            <Link
-              prefetch={false}
-              href={ROUTES.contact}
+            <a
+              href={WA.home}
+              target="_blank"
+              rel="noopener"
               className="hidden h-10 items-center bg-ink px-5 text-[0.72rem] tracking-[0.18em] text-background uppercase transition-colors hover:bg-accent-deep lg:inline-flex dark:bg-night-ink dark:text-night"
             >
               Enquire
-            </Link>
+            </a>
             <button
               type="button"
               aria-expanded={open}

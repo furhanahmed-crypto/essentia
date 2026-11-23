@@ -3,7 +3,7 @@
     "crumb": "Contact",
     "label": "Contact · Visit & enquire",
     "title": "Say *hello*.",
-    "lede": "Call, WhatsApp or send a note — we will help you choose the right service or package and find a time that suits you."
+    "lede": "Call or WhatsApp — we will help you choose the right service or package and find a time that suits you."
   },
   "details": {
     "label": "The lounge",
@@ -14,17 +14,11 @@
     "directions": "Get directions",
     "instagram": "Follow on Instagram"
   },
-  "form": {
-    "label": "Send a note",
-    "title": "Tell us what you have in mind.",
-    "nameLabel": "Name",
-    "phoneLabel": "Phone",
-    "emailLabel": "Email (optional)",
-    "serviceLabel": "Service interest",
-    "messageLabel": "Message (optional)",
-    "submitLabel": "Send on WhatsApp",
-    "privacyNote": "Your note opens in WhatsApp — nothing is stored on this website.",
-    "nameError": "Please add your name.",
-    "phoneError": "Please add a phone number we can reach you on (at least 10 digits)."
+  "enquire": {
+    "label": "Enquire",
+    "title": "Message us on WhatsApp.",
+    "lede": "Tell us what you have in mind — a cut, colour, package or a first visit. We reply from the lounge.",
+    "cta": "WhatsApp the lounge",
+    "note": "No forms on this site. Enquiries open in WhatsApp only."
   }
 }

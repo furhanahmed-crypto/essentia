@@ -6,7 +6,6 @@ import { Band } from "@/components/shared/editorial/Band";
 import { Cta } from "@/components/shared/editorial/Cta";
 import { Icon } from "@/components/shared/Icon";
 import { Label } from "@/components/shared/editorial/Label";
-import { ROUTES } from "@/constants/routes";
 import { treatmentCount } from "@/constants/services";
 import { whatsappLink } from "@/constants/whatsapp";
 import type { ServiceCategory } from "@/types/services";
@@ -42,14 +41,12 @@ export function ServiceOverview({ service, label }: ServiceOverviewProps) {
             ))}
           </dl>
           <div className="mt-12 flex flex-wrap items-center gap-x-8 gap-y-4">
-            <Cta href={ROUTES.contact}>Enquire about {service.short}</Cta>
             <Cta
               href={whatsappLink(`Hi, I'd like to know more about ${service.name} at Essentia.`)}
-              variant="line"
               external
               icon={<Icon icon={faWhatsapp} className="text-base" />}
             >
-              WhatsApp
+              Enquire about {service.short}
             </Cta>
           </div>
         </div>

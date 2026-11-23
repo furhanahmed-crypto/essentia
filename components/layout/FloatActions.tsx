@@ -1,14 +1,12 @@
 "use client";
 
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { faWhatsapp } from "@fortawesome/free-brands-svg-icons";
 import { Icon } from "@/components/shared/Icon";
-import { ROUTES } from "@/constants/routes";
+import { BRAND } from "@/constants/brand";
 import { whatsappLink, whatsappMessageFor } from "@/constants/whatsapp";
 
-// Quick contact. Phones and tablets: a flat two-part bar fixed to the bottom edge.
-// Desktop: a single square WhatsApp tab in the corner whose label slides out on hover.
+// Quick contact. Phones and tablets: call + WhatsApp bar. Desktop: WhatsApp corner tab.
 export function FloatActions() {
   const pathname = usePathname();
   const href = whatsappLink(whatsappMessageFor(pathname));
@@ -17,21 +15,20 @@ export function FloatActions() {
     <>
       <div aria-label="Quick contact" role="region" className="fixed inset-x-0 bottom-0 z-40 grid grid-cols-2 border-t border-line bg-background lg:hidden">
         <a
+          href={BRAND.phoneHref}
+          className="flex h-14 items-center justify-center gap-2.5 border-r border-line type-label text-ink"
+        >
+          Call
+        </a>
+        <a
           href={href}
           target="_blank"
           rel="noopener"
-          className="flex h-14 items-center justify-center gap-2.5 border-r border-line type-label text-ink"
+          className="flex h-14 items-center justify-center gap-2.5 bg-ink type-label text-background dark:bg-night-ink dark:text-night"
         >
           <Icon icon={faWhatsapp} className="text-lg text-whatsapp" />
           WhatsApp
         </a>
-        <Link
-          prefetch={false}
-          href={ROUTES.contact}
-          className="flex h-14 items-center justify-center bg-ink type-label text-background dark:bg-night-ink dark:text-night"
-        >
-          Enquire
-        </Link>
       </div>
 
       <a
