@@ -1,21 +1,20 @@
 import type { Metadata, Viewport } from "next";
-import { Caveat, Libre_Baskerville, Merriweather } from "next/font/google";
+import { Bodoni_Moda, Caveat, Manrope } from "next/font/google";
 import { env } from "@/config/env";
 import { BRAND } from "@/constants/brand";
 import { ThemeProvider } from "@/components/theme/ThemeProvider";
 import "./globals.css";
 
-const libreBaskerville = Libre_Baskerville({
-  variable: "--font-libre-baskerville",
+const bodoniModa = Bodoni_Moda({
+  variable: "--font-bodoni-moda",
   subsets: ["latin"],
-  weight: ["400", "700"],
   style: ["normal", "italic"],
+  axes: ["opsz"],
 });
 
-const merriweather = Merriweather({
-  variable: "--font-merriweather",
+const manrope = Manrope({
+  variable: "--font-manrope",
   subsets: ["latin"],
-  weight: ["300", "400", "700"],
 });
 
 const caveat = Caveat({
@@ -60,7 +59,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
     <html
       lang="en-IN"
       suppressHydrationWarning
-      className={`${libreBaskerville.variable} ${merriweather.variable} ${caveat.variable}`}
+      className={`${bodoniModa.variable} ${manrope.variable} ${caveat.variable}`}
     >
       <body>
         <ThemeProvider>{children}</ThemeProvider>

@@ -1,3 +1,8 @@
+/** Pinned and scrubbed home sequences run only here; everyone else gets the static layout. */
+export const DESKTOP_MOTION = "(min-width: 1024px) and (prefers-reduced-motion: no-preference)";
+/** Light entrance motion that is fine on any screen size. */
+export const ANY_MOTION = "(prefers-reduced-motion: no-preference)";
+
 // Motion values copied from the GSAP code in assets/js/main.js on the PHP site.
 export const easePower3Out = [0.215, 0.61, 0.355, 1] as const;
 

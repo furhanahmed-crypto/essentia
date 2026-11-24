@@ -225,9 +225,9 @@
   --color-line: var(--es-line);
   --color-em: var(--es-em);
 
-  --font-sans: var(--font-merriweather), ui-serif, Georgia, serif;
-  --font-heading: var(--font-libre-baskerville), ui-serif, Georgia, serif;
-  --font-body: var(--font-merriweather), ui-serif, Georgia, serif;
+  --font-sans: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-bodoni-moda), ui-serif, Georgia, serif;
+  --font-body: var(--font-manrope), ui-sans-serif, system-ui, sans-serif;
   --font-script: var(--font-caveat), ui-serif, Georgia, cursive;
 
   --shadow-card: var(--er-shadow);
@@ -780,6 +780,81 @@
   font-size: clamp(1rem, 0.95rem + 0.3vw, 1.2rem);
   font-weight: 300;
   line-height: 1.8;
+}
+
+/* Home art direction: Bodoni Moda at poster scale, Manrope for the quiet parts. */
+@utility type-mega {
+  font-family: var(--font-heading);
+  font-size: clamp(4.5rem, 1rem + 15vw, 17rem);
+  font-weight: 400;
+  line-height: 0.82;
+  letter-spacing: -0.045em;
+}
+@utility type-poster {
+  font-family: var(--font-heading);
+  font-size: clamp(2.6rem, 1rem + 5.2vw, 6.5rem);
+  font-weight: 400;
+  line-height: 0.95;
+  letter-spacing: -0.035em;
+}
+@utility type-stage {
+  font-family: var(--font-heading);
+  font-size: clamp(2.2rem, 1rem + 3.4vw, 4.5rem);
+  font-weight: 400;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+@utility type-kicker {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  font-weight: 500;
+  line-height: 1.4;
+  letter-spacing: 0.04em;
+}
+
+/* Text set over photography: a soft charcoal scrim built from the night token. */
+@utility scrim-night {
+  background-image: linear-gradient(
+    to top,
+    color-mix(in srgb, var(--es-night) 88%, transparent) 0%,
+    color-mix(in srgb, var(--es-night) 35%, transparent) 45%,
+    color-mix(in srgb, var(--es-night) 10%, transparent) 100%
+  );
+}
+
+/* Services stage: the incoming photo wipes in from the right over the one it replaces. */
+.stage-layer {
+  clip-path: inset(0 0 0 100%);
+}
+.stage-layer[data-state="previous"] {
+  clip-path: inset(0 0 0 0);
+  z-index: 1;
+}
+.stage-layer[data-state="active"] {
+  clip-path: inset(0 0 0 0);
+  z-index: 2;
+  transition: clip-path 1.1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+.stage-layer > * {
+  transform: scale(1.14);
+}
+.stage-layer[data-state="active"] > * {
+  transform: none;
+  transition: transform 1.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+@media (prefers-reduced-motion: reduce) {
+  .stage-layer[data-state="active"],
+  .stage-layer[data-state="active"] > * {
+    transition: none;
+  }
+}
+
+/* Hide a horizontal track's scrollbar while keeping it scrollable. */
+@utility no-scrollbar {
+  scrollbar-width: none;
+  &::-webkit-scrollbar {
+    display: none;
+  }
 }
 
 /* The arched-mirror frame: the top becomes a half circle at any width. */

@@ -1,19 +1,18 @@
 import type { Metadata } from "next";
 import { JsonLd } from "@/components/shared/JsonLd";
-import { Band } from "@/components/shared/editorial/Band";
-import { VisitBand } from "@/components/shared/VisitBand";
-import { Cover } from "@/components/home/Cover";
-import { GuestNotes } from "@/components/home/GuestNotes";
-import { Lookbook } from "@/components/home/Lookbook";
-import { Lounge } from "@/components/home/Lounge";
-import { MenuIndex } from "@/components/home/MenuIndex";
-import { Questions } from "@/components/home/Questions";
-import { Rituals } from "@/components/home/Rituals";
-import { Statement } from "@/components/home/Statement";
+import { Faq } from "@/components/home/faq/Faq";
+import { Finale } from "@/components/home/finale/Finale";
+import { Gallery } from "@/components/home/gallery/Gallery";
+import { Hero } from "@/components/home/hero/Hero";
+import { Journey } from "@/components/home/journey/Journey";
+import { Manifesto } from "@/components/home/manifesto/Manifesto";
+import { Notes } from "@/components/home/notes/Notes";
+import { Occasions } from "@/components/home/occasions/Occasions";
+import { ServiceStage } from "@/components/home/services/ServiceStage";
+import { Story } from "@/components/home/story/Story";
 import home from "@/constants/home/content.json";
 import { BRAND } from "@/constants/brand";
 import { ROUTES } from "@/constants/routes";
-import { emphasis } from "@/utils/emphasis";
 import { faqData, websiteData } from "@/utils/structuredData";
 import { pageMetadata } from "@/utils/seo";
 
@@ -24,22 +23,20 @@ export const metadata: Metadata = pageMetadata({
 });
 
 export default function HomePage() {
-  const { testimonials } = home;
   return (
     <>
       <JsonLd data={websiteData()} />
       <JsonLd data={faqData(home.faq.items)} />
-      <Cover />
-      <Statement />
-      <MenuIndex />
-      <Lookbook />
-      <Rituals />
-      <Lounge />
-      <Band tone="ivory" ariaLabelledby="notes-title" space="none">
-        <GuestNotes label={testimonials.label} title={emphasis(testimonials.title)} items={testimonials.items} />
-      </Band>
-      <Questions />
-      <VisitBand pathname={ROUTES.home} />
+      <Hero />
+      <Story />
+      <ServiceStage />
+      <Gallery />
+      <Occasions />
+      <Manifesto />
+      <Journey />
+      <Notes />
+      <Faq />
+      <Finale />
     </>
   );
 }
