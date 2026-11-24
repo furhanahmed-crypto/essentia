@@ -19,11 +19,11 @@
       { "word": "skin,", "image": "/images/lookbook/ig-05.jpg" },
       { "word": "nails", "image": "/images/lookbook/ig-03.jpg" }
     ],
-    "after": "and the finishing touches — because essential care deserves *exceptional* hands.",
+    "after": "— care that feels *exceptional*.",
     "facts": [
-      { "value": "05", "label": "Service disciplines under one roof" },
+      { "value": "05", "label": "Service disciplines under one roof", "countTo": 5, "pad": 2 },
       { "value": "Unisex", "label": "Considered care for women and men" },
-      { "value": "7 days", "label": "Open by appointment, Mon–Sun" }
+      { "value": "7 days", "label": "Open by appointment, Mon–Sun", "countTo": 7, "suffix": " days" }
     ],
     "cta": { "label": "Our story", "href": "/about" }
   },

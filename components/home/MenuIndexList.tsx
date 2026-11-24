@@ -3,87 +3,82 @@
 import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowUpRight } from "lucide-react";
 import { cn } from "cn";
 import { servicePath } from "@/constants/routes";
 import { indexOf } from "@/utils/emphasis";
+import type { MenuRow } from "./MenuIndex";
 
-export interface MenuRow {
-  slug: string;
-  name: string;
-  summary: string;
-  image: string;
-  imageAlt: string;
-  count: number;
-}
-
-// The rows and the preview frame. On desktop the frame sits to the right of the list and
-// crossfades to whichever row is hovered or focused; on mobile each row carries its own thumbnail.
+// Image-led service panels: each discipline is a full-bleed strip; active panel expands on desktop.
 export function MenuIndexList({ rows }: { rows: MenuRow[] }) {
   const [active, setActive] = useState(0);
 
   return (
-    <div className="grid gap-8 md:grid-cols-[minmax(0,1fr)_minmax(0,15rem)] xl:grid-cols-[minmax(0,1fr)_minmax(0,18rem)]">
-      <ol className="m-0 border-t border-line p-0">
-        {rows.map((row, index) => (
-          <li key={row.slug} className="list-none border-b border-line">
-            <Link
-              href={servicePath(row.slug)}
-              onMouseEnter={() => setActive(index)}
-              onFocus={() => setActive(index)}
-              className="group grid grid-cols-[2.25rem_minmax(0,1fr)_auto] items-center gap-x-4 py-6 outline-none md:grid-cols-[3rem_minmax(0,1fr)_auto] md:py-7"
-            >
-              <span className="self-start pt-2 type-label text-em tabular-nums">{indexOf(index + 1)}</span>
-              <span className="min-w-0">
+    <div className="flex flex-col gap-3 lg:h-[min(72vh,640px)] lg:flex-row lg:gap-2">
+      {rows.map((row, index) => {
+        const open = active === index;
+        return (
+          <Link
+            key={row.slug}
+            href={servicePath(row.slug)}
+            onMouseEnter={() => setActive(index)}
+            onFocus={() => setActive(index)}
+            className={cn(
+              "group relative block min-h-[11rem] overflow-hidden bg-mist outline-none transition-[flex-grow] duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] sm:min-h-[13rem]",
+              "lg:h-full lg:min-h-0",
+              open ? "lg:flex-[2.4]" : "lg:flex-[0.85]",
+            )}
+          >
+            <Image
+              src={row.image}
+              alt={row.imageAlt}
+              fill
+              sizes="(max-width: 1024px) 100vw, 40vw"
+              className={cn(
+                "object-cover transition-transform duration-[1.2s] ease-out",
+                open ? "scale-100" : "scale-110 lg:scale-105",
+              )}
+            />
+            <div
+              aria-hidden
+              className={cn(
+                "absolute inset-0 bg-gradient-to-t from-night/80 via-night/25 to-transparent transition-opacity duration-500",
+                open ? "opacity-100" : "opacity-80 lg:opacity-70",
+              )}
+            />
+            <div className="absolute inset-x-0 bottom-0 z-10 flex items-end justify-between gap-4 p-5 sm:p-6">
+              <div className="min-w-0">
+                <span className="type-label text-night-muted tabular-nums">{indexOf(index + 1)}</span>
                 <span
                   className={cn(
-                    "block font-heading text-[1.7rem] leading-tight tracking-tight transition-colors duration-300 sm:text-4xl xl:text-[2.75rem]",
-                    active === index ? "md:text-ink" : "md:text-ink/45",
-                    "text-ink group-hover:text-ink group-focus-visible:text-accent-deep",
+                    "mt-2 block font-heading tracking-tight text-night-ink transition-[font-size] duration-500",
+                    open ? "text-3xl sm:text-4xl lg:text-[2.75rem]" : "text-2xl sm:text-3xl lg:text-2xl",
                   )}
                 >
                   {row.name}
                 </span>
-                <span className="mt-2 block max-w-lg text-sm text-text">
-                  <span className="type-label mr-3 text-ink/55">{row.count} treatments</span>
-                  <span className="max-md:hidden">{row.summary}</span>
+                <span
+                  className={cn(
+                    "mt-2 block max-w-sm text-sm text-night-muted transition-opacity duration-500",
+                    open ? "opacity-100" : "opacity-0 lg:h-0 lg:overflow-hidden lg:opacity-0",
+                  )}
+                >
+                  <span className="type-label mr-2 text-em">{row.count} treatments</span>
+                  {row.summary}
                 </span>
-              </span>
-              <span className="flex items-center gap-4">
-                <span className="arch relative block h-16 w-12 md:hidden">
-                  <Image src={row.image} alt="" fill sizes="48px" className="object-cover" />
-                </span>
-                <ArrowRight
-                  aria-hidden
-                  strokeWidth={1.25}
-                  className="size-6 text-ink/50 transition-transform duration-300 group-hover:translate-x-1.5 group-hover:text-ink max-md:hidden"
-                />
-              </span>
-            </Link>
-          </li>
-        ))}
-      </ol>
-
-      <div aria-hidden className="relative hidden md:block">
-        <div className="sticky top-32 aspect-[3/4] w-full overflow-hidden bg-mist">
-          {rows.map((row, index) => (
-            <Image
-              key={row.slug}
-              src={row.image}
-              alt=""
-              fill
-              sizes="(max-width: 1280px) 240px, 288px"
-              className={cn(
-                "object-cover transition-[opacity,transform] duration-700 ease-out",
-                active === index ? "scale-100 opacity-100" : "scale-105 opacity-0",
-              )}
-            />
-          ))}
-          <p className="absolute bottom-0 left-0 m-0 bg-card px-4 py-2 type-label text-ink">
-            {indexOf(active + 1)} / {indexOf(rows.length)}
-          </p>
-        </div>
-      </div>
+              </div>
+              <ArrowUpRight
+                aria-hidden
+                strokeWidth={1.25}
+                className={cn(
+                  "size-6 shrink-0 text-night-ink transition-transform duration-500",
+                  open ? "translate-x-0 opacity-100" : "translate-y-1 opacity-70 lg:opacity-40",
+                )}
+              />
+            </div>
+          </Link>
+        );
+      })}
     </div>
   );
 }

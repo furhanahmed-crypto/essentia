@@ -15,9 +15,7 @@ import { NavLinks } from "./header/NavLinks";
 
 const emptySubscribe = () => () => undefined;
 
-// Editorial masthead: links on the left, the logo centred, contact on the right. It stays a single
-// ivory surface and only gains a hairline and tighter height once the page scrolls.
-// Below lg the links move into a full-screen menu opened by a text button.
+// Solid masthead over the light hero — tightens slightly on scroll.
 export function SiteHeader() {
   const scrolled = useScrolled(24);
   const [open, setOpen] = useState(false);
@@ -44,7 +42,13 @@ export function SiteHeader() {
             <NavLinks links={NAV_LEFT} />
           </nav>
 
-          <Link prefetch={false} href={ROUTES.home} onClick={close} aria-label={`${BRAND.name} — home`} className="justify-self-start lg:justify-self-center">
+          <Link
+            prefetch={false}
+            href={ROUTES.home}
+            onClick={close}
+            aria-label={`${BRAND.name} — home`}
+            className="justify-self-start lg:justify-self-center"
+          >
             <Image
               src={dark ? BRAND.logoLight : BRAND.logo}
               alt={BRAND.name}

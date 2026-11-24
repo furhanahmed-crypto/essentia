@@ -35,7 +35,7 @@ export default function HomePage() {
       <Lookbook />
       <Rituals />
       <Lounge />
-      <Band tone="ivory" ariaLabelledby="notes-title">
+      <Band tone="ivory" ariaLabelledby="notes-title" space="none">
         <GuestNotes label={testimonials.label} title={emphasis(testimonials.title)} items={testimonials.items} />
       </Band>
       <Questions />

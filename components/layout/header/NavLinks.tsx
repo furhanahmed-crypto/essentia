@@ -10,16 +10,31 @@ import type { NavLink } from "@/constants/routes";
 export const isActivePath = (pathname: string, href: string): boolean =>
   pathname === href || (href !== "/" && pathname.startsWith(`${href}/`));
 
-const linkClass = (active: boolean) =>
+const linkClass = (active: boolean, inverse: boolean) =>
   cn(
-    "relative py-2 text-[0.74rem] tracking-[0.18em] uppercase transition-colors duration-300 hover:text-ink",
+    "relative py-2 text-[0.74rem] tracking-[0.18em] uppercase transition-colors duration-300",
     "after:absolute after:bottom-0 after:left-1/2 after:size-1 after:-translate-x-1/2 after:rounded-full after:bg-primary after:transition-opacity",
-    active ? "text-ink after:opacity-100" : "text-ink/65 after:opacity-0",
+    inverse
+      ? active
+        ? "text-night-ink after:opacity-100 hover:text-night-ink"
+        : "text-night-ink/70 after:opacity-0 hover:text-night-ink"
+      : active
+        ? "text-ink after:opacity-100 hover:text-ink"
+        : "text-ink/65 after:opacity-0 hover:text-ink",
   );
 
 // Desktop navigation: small uppercase links with a sage dot under the current page.
 // A link with children (Services) opens a square-cornered dropdown on hover.
-export function NavLinks({ links, className }: { links: NavLink[]; className?: string }) {
+export function NavLinks({
+  links,
+  className,
+  inverse = false,
+}: {
+  links: NavLink[];
+  className?: string;
+  /** Light text for use over a dark hero. */
+  inverse?: boolean;
+}) {
   const pathname = usePathname();
   return (
     <ul className={cn("m-0 flex items-center gap-8 p-0", className)}>
@@ -28,7 +43,7 @@ export function NavLinks({ links, className }: { links: NavLink[]; className?: s
         if (!children) {
           return (
             <li key={href} className="list-none">
-              <Link prefetch={false} href={href} aria-current={active ? "page" : undefined} className={linkClass(active)}>
+              <Link prefetch={false} href={href} aria-current={active ? "page" : undefined} className={linkClass(active, inverse)}>
                 {label}
               </Link>
             </li>
@@ -40,7 +55,7 @@ export function NavLinks({ links, className }: { links: NavLink[]; className?: s
               <DropdownMenuTrigger
                 openOnHover
                 delay={80}
-                className={cn(linkClass(active), "group/nav flex cursor-pointer items-center gap-1.5 bg-transparent outline-none")}
+                className={cn(linkClass(active, inverse), "group/nav flex cursor-pointer items-center gap-1.5 bg-transparent outline-none")}
               >
                 {label}
                 <ChevronDown className="size-3 transition-transform duration-300 group-data-popup-open/nav:rotate-180" />

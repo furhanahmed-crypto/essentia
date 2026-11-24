@@ -22,8 +22,7 @@ interface GuestNotesProps {
 
 const ADVANCE_MS = 7000;
 
-// One note at a time, set large in italic. A numbered selector (a real tab list) switches notes;
-// they also advance slowly until the visitor picks one, and never under reduced motion.
+// Quote + contained photograph — no full-bleed section background.
 export function GuestNotes({ label, title, items }: GuestNotesProps) {
   const [active, setActive] = useState(0);
   const [auto, setAuto] = useState(true);
@@ -41,11 +40,11 @@ export function GuestNotes({ label, title, items }: GuestNotesProps) {
   };
 
   return (
-    <div className="grid gap-12 lg:grid-cols-12 lg:gap-10">
-      <div className="flex flex-col gap-14 lg:col-span-7 lg:justify-between">
+    <div className="shell grid gap-12 py-20 md:py-28 lg:grid-cols-12 lg:gap-10">
+      <div className="flex flex-col gap-10 lg:col-span-7 lg:justify-between">
         <div>
           <Label index={6}>{label}</Label>
-          <h2 id="notes-title" className="mt-6 mb-0 type-title text-ink">
+          <h2 id="notes-title" className="mt-6 mb-0 max-w-lg type-title text-ink">
             {title}
           </h2>
         </div>
@@ -55,24 +54,24 @@ export function GuestNotes({ label, title, items }: GuestNotesProps) {
           id="note-panel"
           aria-labelledby={`note-tab-${active}`}
           aria-live="polite"
-          className="relative pt-10"
+          className="relative max-w-2xl pt-6"
         >
-          <span aria-hidden className="absolute -top-6 -left-1 font-heading text-[9rem] leading-none text-primary/30 select-none">
+          <span aria-hidden className="absolute -top-2 left-0 font-heading text-6xl leading-none text-primary/35 select-none">
             “
           </span>
-          <blockquote key={active} className="hero-rise m-0">
-            <p className="m-0 max-w-2xl font-heading text-[1.65rem] leading-[1.35] tracking-tight text-ink italic sm:text-[2rem] sm:leading-[1.3]">
+          <blockquote key={active} className="m-0">
+            <p className="m-0 font-heading text-[clamp(1.25rem,2vw,1.85rem)] leading-snug tracking-tight text-ink italic">
               {note.quote}
             </p>
-            <footer className="mt-8 flex flex-wrap items-center gap-x-4 gap-y-1">
-              <span aria-hidden className="h-px w-10 bg-ink/40" />
+            <footer className="mt-6 flex flex-wrap items-center gap-x-4 gap-y-1">
+              <span aria-hidden className="h-px w-8 bg-ink/35" />
               <span className="text-sm text-ink">{note.name}</span>
               <span className="type-label text-em">{note.role}</span>
             </footer>
           </blockquote>
         </div>
 
-        <div role="tablist" aria-label="Guest notes" className="grid grid-cols-6 border-t border-line">
+        <div role="tablist" aria-label="Guest notes" className="grid grid-cols-3 gap-y-2 border-t border-line pt-5 sm:grid-cols-6">
           {items.map((item, index) => (
             <button
               key={item.role}
@@ -84,7 +83,7 @@ export function GuestNotes({ label, title, items }: GuestNotesProps) {
               aria-label={`${item.role} — note ${index + 1}`}
               onClick={() => choose(index)}
               className={cn(
-                "relative -mt-px border-t-2 pt-4 text-left type-label transition-colors",
+                "relative -mt-px border-t-2 pt-3 text-left type-label transition-colors",
                 index === active ? "border-ink text-ink" : "border-transparent text-ink/45 hover:text-ink",
               )}
             >
@@ -95,14 +94,14 @@ export function GuestNotes({ label, title, items }: GuestNotesProps) {
         </div>
       </div>
 
-      <div className="relative hidden min-h-[460px] overflow-hidden bg-mist lg:col-span-5 lg:block">
+      <div className="relative min-h-[280px] overflow-hidden bg-mist sm:min-h-[360px] lg:col-span-5 lg:min-h-[420px]">
         {items.map((item, index) => (
           <Image
             key={item.image}
             src={item.image}
             alt={index === active ? item.imageAlt : ""}
             fill
-            sizes="(max-width: 1320px) 40vw, 520px"
+            sizes="(max-width: 1024px) 90vw, 420px"
             className={cn(
               "object-cover transition-opacity duration-700",
               index === active ? "opacity-100" : "opacity-0",
