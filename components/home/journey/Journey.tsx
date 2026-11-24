@@ -50,7 +50,7 @@ export function Journey() {
     <section
       ref={root}
       aria-labelledby="journey-title"
-      className="relative overflow-hidden bg-mist py-20 md:py-28 lg:flex lg:h-[calc(100svh-var(--header-h))] lg:min-h-[40rem] lg:flex-col lg:py-12"
+      className="relative overflow-hidden bg-mist py-20 md:py-28 lg:flex lg:flex-col [&.is-pinned]:h-[calc(100svh-var(--header-h))] [&.is-pinned]:min-h-[40rem] [&.is-pinned]:py-12"
     >
       <div className="shell flex items-end justify-between gap-6">
         <h2 id="journey-title" className="m-0 type-poster text-ink">
@@ -59,13 +59,13 @@ export function Journey() {
         <p className="m-0 max-w-[12rem] text-right type-kicker tracking-[0.14em] text-ink/60 uppercase">{journey.label}</p>
       </div>
 
-      <div className="no-scrollbar mt-14 lg:mt-0 lg:flex lg:flex-1 lg:items-center lg:overflow-x-auto in-[.is-pinned]:overflow-visible">
+      <div className="no-scrollbar mt-14 [.is-pinned_&]:mt-0 lg:flex lg:flex-1 lg:items-center lg:overflow-x-auto [.is-pinned_&]:overflow-visible">
         <div
           ref={track}
           className="shell relative flex flex-col gap-14 border-l border-ink/20 pl-8 lg:mx-0 lg:h-[78%] lg:w-max lg:flex-row lg:gap-28 lg:border-0 lg:pr-24 lg:pl-[var(--es-gutter)]"
         >
           {steps.map((step, index) => (
-            <div key={step.title} className={cn("relative lg:w-[30rem] lg:shrink-0", LIFT[index])}>
+            <div key={step.title} className={cn("relative lg:w-max lg:max-w-[38rem] lg:shrink-0", LIFT[index])}>
               <span aria-hidden className="absolute top-3 -left-[2.3rem] size-3 rounded-full bg-accent-deep lg:hidden" />
               <JourneyStep step={step} position={index} />
             </div>

@@ -27,7 +27,7 @@ export function OccasionPanel({ side, pkg }: OccasionPanelProps) {
       <div aria-hidden className="absolute inset-0 -z-10 scrim-night" />
 
       <div className="flex flex-col gap-6 p-[var(--es-gutter)] pb-10 lg:p-12">
-        <p className="m-0 type-kicker tracking-[0.18em] text-night-ink/75 uppercase">{pkg.audience} · {pkg.category}</p>
+        <p className="m-0 type-kicker tracking-[0.18em] text-night-ink/75 uppercase">{pkg.name}</p>
         <h3 className="m-0 font-heading text-[clamp(4.5rem,2rem+8vw,10rem)] leading-[0.85] tracking-[-0.04em] text-night-ink">
           {side.word}
         </h3>

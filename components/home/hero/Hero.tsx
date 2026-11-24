@@ -63,11 +63,17 @@ export function Hero() {
         <span className="hidden text-right sm:block">{BRAND.hoursLine}</span>
       </div>
 
-      <figure className="hero-inset absolute top-[16%] right-[var(--es-gutter)] m-0 hidden w-[clamp(8rem,12vw,12.5rem)] md:block">
-        <div className="relative aspect-[3/4] overflow-hidden shadow-[0_30px_60px_-30px_rgba(0,0,0,0.7)]">
-          <Image src={hero.inset} alt={hero.insetAlt} fill sizes="200px" className="object-cover object-[50%_30%]" />
+      {/* Passe-partout: cream mat, hairline keyline a few px outside it, caption ruled underneath. */}
+      <figure className="hero-inset absolute top-[9%] right-[var(--es-gutter)] m-0 hidden w-[clamp(8rem,min(11vw,21svh),12rem)] md:block">
+        <div className="bg-cream p-2 shadow-[0_34px_70px_-30px_rgba(0,0,0,0.85)] outline outline-1 outline-offset-[7px] outline-night-ink/35 dark:bg-night-ink">
+          <div className="relative aspect-[3/4] overflow-hidden">
+            <Image src={hero.inset} alt={hero.insetAlt} fill sizes="216px" className="object-cover object-[50%_62%]" />
+          </div>
         </div>
-        <figcaption className="mt-3 type-kicker text-night-ink/70">{hero.caption}</figcaption>
+        <figcaption className="mt-5 flex items-center justify-end gap-3 type-kicker tracking-[0.12em] whitespace-nowrap text-night-ink/80 uppercase">
+          <span aria-hidden className="h-px w-6 bg-night-ink/50" />
+          {hero.caption}
+        </figcaption>
       </figure>
 
       <div className="shell flex flex-1 flex-col justify-end pb-4 md:pb-6">
@@ -93,7 +99,7 @@ export function Hero() {
 
       <HeroWordmark
         word={BRAND.name}
-        className="-mb-[0.12em] w-full justify-between px-[var(--es-gutter)] text-night-ink"
+        className="w-full justify-between px-[var(--es-gutter)] text-night-ink"
       />
     </section>
   );

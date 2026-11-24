@@ -4,6 +4,7 @@ import { useEffect, useState, type ReactNode } from "react";
 import { ReactLenis, useLenis } from "lenis/react";
 import gsap from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { ScrollTriggerSync } from "@/components/motion/ScrollTriggerSync";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -53,7 +54,14 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
     };
   }, []);
 
-  if (mode === "off") return children;
+  if (mode === "off") {
+    return (
+      <>
+        <ScrollTriggerSync />
+        {children}
+      </>
+    );
+  }
 
   return (
     <ReactLenis
@@ -69,6 +77,7 @@ export function SmoothScroll({ children }: { children: ReactNode }) {
       }}
     >
       <LenisGsapBridge />
+      <ScrollTriggerSync />
       {children}
     </ReactLenis>
   );

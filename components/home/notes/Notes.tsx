@@ -47,7 +47,7 @@ export function Notes() {
         </div>
 
         <div className="relative lg:col-span-7">
-          <span aria-hidden className="pointer-events-none absolute -top-16 -left-2 font-heading text-[11rem] leading-none text-em/25 select-none md:-top-24 md:text-[16rem]">
+          <span aria-hidden className="pointer-events-none absolute -top-20 -left-3 font-heading text-[14rem] leading-none text-em/25 select-none md:-top-36 md:-left-6 md:text-[24rem]">
             “
           </span>
           <h2 id="notes-title" className="relative m-0 type-kicker tracking-[0.18em] text-night-ink/60 uppercase">

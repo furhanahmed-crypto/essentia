@@ -73,7 +73,7 @@ export function Gallery() {
             ) : null}
             <div
               className={
-                column.spread ? "grid grid-cols-2 items-start gap-5 lg:flex lg:flex-col lg:gap-16" : "flex flex-col gap-10 lg:gap-16"
+                column.spread ? "grid grid-cols-2 items-start gap-5 lg:flex lg:flex-col lg:items-stretch lg:gap-16" : "flex flex-col gap-10 lg:gap-16"
               }
             >
               {column.items.map((itemIndex) => (

@@ -1,4 +1,4 @@
-# Design — "The Atelier Edit"
+# Design — "The Lounge, Directed"
 
 Essentia's visual language is its own. Eat Rrite stays an engineering reference only (file
 structure, data flow, motion utilities). No Eat Rrite section composition, card style, pill
@@ -6,89 +6,110 @@ header, script eyebrow or floating illustration is reused.
 
 ## Concept
 
-Essentia is presented like a beauty atelier's printed lookbook: large editorial type, generous
-margins, photographs set into the page rather than boxed in cards, and one recurring motif taken
-from the salon itself — **the arched mirror** (the lounge's oval LED mirrors). Arches frame the
-key photographs; everything else is square-cornered with hairline rules.
+The home page is art-directed like a beauty campaign, not a single editorial template. Every
+section has its own layout, ground, image treatment, type scale and motion, and no composition
+repeats back to back: cinematic, then pinned, then interactive, then gallery, then full-bleed
+photography, then pure type.
 
-Tone: luxury without ornament, calm without emptiness. Each section has its own composition;
-consistency comes from the type system, the hairline grid, the arch, and the colour rhythm.
+Tone: premium beauty, calm expertise, contrast between charcoal, sage and cream. The italic
+sage word, the small uppercase label and the hairline divider are retired as defaults — each
+appears at most a couple of times on the page.
 
-## Palette (unchanged brand colours, new roles)
+## Palette (tokens are immutable)
 
-| Token | Hex | Role |
+The colour tokens in `app/globals.css` (`:root` / `.dark` HSL variables, `--er-*` aliases,
+`--es-*` editorial layer, `band-night`) must not be changed, renamed or regenerated. Sections
+only combine them differently.
+
+| Token | Hex | Used as |
 | --- | --- | --- |
-| Warm Ivory | `#EEEAE4` | Page ground (`bg-background`) |
-| Soft Cream | `#F8F6F2` | Raised ground, forms (`bg-card`) |
-| Pale Sage | `#D8E3DC` | Feature bands — lookbook, visit (`bg-beige-deep` / `bg-mist`) |
-| Muted Sage | `#79A797` | Accent: index numbers, active states, primary CTA (`primary`) |
-| Deep Sage | `#5F8A7B` | Accessible sage text on light grounds (`accent-deep`) |
-| Charcoal | `#343330` | Ink, and the "night" bands — principles, footer (`bg-night`) |
+| Warm Ivory | `#EEEAE4` | Page ground (`bg-background`) — story |
+| Soft Cream | `#F8F6F2` | Raised ground (`bg-card`) — gallery, FAQ |
+| Pale Sage | `#D8E3DC` | `bg-mist` — the visit journey, open FAQ items |
+| Muted Sage | `#79A797` | `bg-primary` — the full-sage bento, finale gradient |
+| Deep Sage | `#5F8A7B` | `accent-deep` — accessible sage text, finale gradient midpoint |
+| Charcoal | `#343330` | Ink, and the night bands — hero, services, packages, testimonials, footer |
 
-Dark theme: ivory → deep green-charcoal, cream → lifted charcoal, sage brightens; night bands go
-near-black so they still read as a deliberate change of light.
+On sage grounds text is charcoal (`text-ink`) in light mode and `text-primary-foreground` in dark
+mode, never cream (contrast).
 
-Rhythm on the home page: ivory → ivory → cream → pale sage → ivory → **night** → ivory → cream →
-pale sage → **night footer**. Never two identical bands back to back without a rule.
+Home rhythm: **night hero** → ivory story → **night services** → cream gallery → **photo split** →
+**sage bento** → pale-sage journey → **night notes** → cream FAQ → sage-to-night finale →
+**night footer**.
 
 ## Typography
 
-- **Libre Baskerville** — display and titles. Big (up to ~7rem), tight leading, with *italic*
-  for the emotional word in a headline (`*word*` in JSON → `<em>`).
-- **Merriweather** — body, light weight, relaxed leading.
-- **Index labels** — small uppercase Merriweather, 0.22em tracking, prefixed with a sage number:
-  `01 — The Menu`. Replaces handwritten eyebrows everywhere.
-- **Caveat** — reserved for one signature only: the tagline in the closing band.
+- **Bodoni Moda** (`--font-heading`) — high-contrast display serif, used at poster scale.
+- **Manrope** (`--font-body`, `--font-sans`) — body, UI, buttons and kickers.
+- **Caveat** — reserved for the one signature line ("We don't do average…").
 
-Utilities: `type-display`, `type-title`, `type-heading`, `type-label`, `type-lede`.
+Home utilities: `type-mega` (wordmarks, "Leave glowing."), `type-poster`
+(section statements), `type-stage` (hero headline, service names), `type-kicker` (small UI text).
+The older `type-display / title / heading / label / lede` remain for the inner pages.
 
 ## Shape & surface
 
-- Corners: square. The arch (`rounded-t-full`) is the only curve, used on hero, story and
-  package photographs.
-- Rules: 1px hairlines (`border-line`) instead of cards and shadows.
-- Buttons: rectangular. Solid charcoal/sage `Cta`, or an underlined text link with an arrow
-  that slides on hover. No 3D gradients, no pills on the marketing site.
+- Mixed shapes with intent: full-bleed photography, tilted frames, the arch (the lounge mirror)
+  and a glowing circle in the journey, round seal CTAs.
+- Buttons: pills and round seals on the home page (`rounded-full`), solid charcoal or sage.
+- Text over photography always sits on `scrim-night` (a gradient built from `--es-night`).
 
 ## Motion
 
-- Photographs open with a clip-path wipe (`MaskReveal`), text rises softly (`Appear`).
-- Service index: hovering a row reveals that service's photograph beside the list.
-- Lookbook: native horizontal scroll with snap and arrow controls.
-- Everything respects `prefers-reduced-motion`.
+All timelines use GSAP + ScrollTrigger with the Lenis bridge (`components/motion/SmoothScroll`).
 
-## Page compositions
+- Set up inside `gsap.matchMedia()` and **revert it on cleanup** (`return () => mm.revert()`),
+  otherwise React Strict Mode captures half-played `from()` values.
+- Pinned / scrubbed sequences run only at `DESKTOP_MOTION` (`constants/motion.ts`: ≥1024px, no
+  reduced motion). Pinned sections add an `is-pinned` class; their fixed viewport height and
+  stacked positioning apply only under that class, so the static fallback reads naturally.
+- Pins start under the sticky header via `pinStart` (`utils/headerOffset.ts`).
+- `ScrollTriggerSync` (mounted by `SmoothScroll`) re-measures every trigger when the document
+  height changes after load (images, fonts, hot reload), so pins never start late and swallow
+  a screen of scroll.
+- Mobile and reduced-motion visitors get stacked, static layouts; reels never autoplay for them.
 
-**Home**
-1. *Cover* — split: headline + lede on ivory, tall arched photograph with an overlapping
-   inset image, index of the five disciplines along the bottom edge.
-2. *Statement* — full-width manifesto sentence with small inline arch images, then three facts
-   divided by vertical rules.
-3. *The Menu* — sticky heading left; five large numbered rows right; hover previews the photo.
-4. *Lookbook* — pale-sage band, horizontal strip of mixed-ratio photographs with captions.
-5. *Rituals* — packages teaser: arched bridal photograph beside a ledger of collections.
-6. *The Lounge* — night band: the real salon interior, four principles (I–IV), and the visit in
-   four movements.
-7. *Guest notes* — one large quote at a time, numbered selector, contextual photograph.
-8. *Questions* — heading + contact prompt left, hairline accordion right.
-9. *Visit* — closing band shared by every page: signature line, address, hours, actions.
+## Home compositions (`components/home/<section>/`)
 
-**Inner pages** open with `PageHero` (breadcrumb, label, oversized title, lede, optional
-cinematic photo strip) instead of a dark photo banner.
+1. *Hero* — full-bleed salon photo on night, headline and lede bottom-left, a matted inset
+   portrait (cream passe-partout, hairline keyline, ruled caption), a round cream "Explore" seal
+   with sage type, and the spaced ESSENTIA wordmark at poster scale along the bottom edge. The
+   wordmark uses a full-em line box (`HeroWordmark`) so its capitals are never clipped. Intro:
+   photo un-clips and settles, letters rise, details fade in.
+2. *Story* — pinned: the three-line brand statement lights up line by line while three photos
+   drift at different depths; the three facts land in the last frame.
+3. *Services* — night stage: a vertical index of the five families (ARIA tablist; hover, click,
+   arrows) beside a large photo that wipes in from the right over the last, with name, summary,
+   signature treatments and a link. Mobile: a snap row of photo tiles above the details.
+4. *Gallery* — four masonry columns of mixed proportions (reels 9:16, stills 4:5 and square)
+   with vertical captions; columns drift at different speeds; reels play only while visible.
+   Instagram stills are small, so frames never exceed ~360px wide.
+5. *Occasions* — Bride and Groom as two full-height photographs side by side; the half you
+   point at widens. Tier names from `packages.json`, WhatsApp enquiry per side, no prices.
+6. *Why Essentia (bento)* — full sage. A 12-column bento: a cream intro card, one tall photo
+   tile across both rows and three square tiles (`components/home/manifesto/`). Each tile is a
+   link; hovering or focusing zooms the photo, deepens the scrim, slides in an arrow and lifts the
+   title and sentence (grid-rows 0fr → 1fr). Touch screens show the sentence without hover. Tiles
+   wipe up once on scroll. *Replaced the pinned word-by-word sequence, which opened on a 15%
+   ghost word and read as an empty sage screen for the first part of the pin.*
+7. *Journey* — pale sage, pinned horizontal walk through the four movements, each framed
+   differently (contact type, portrait, arch, glowing circle), with a progress line. Mobile: a
+   vertical timeline.
+8. *Notes* — night: large photo with wipe transitions, the next guest tucked behind, the quote
+   in Bodoni italic under an oversized mark; prev/next, counter, thumbnails, autoplay that
+   pauses on hover/focus.
+9. *FAQ* — sticky poster title left, Base UI accordion right; the open item becomes a sage panel.
+10. *Finale* — sage melting into night, "Leave glowing." at mega scale, contact details, and a
+    magnetic round WhatsApp button. The footer below ends with the full-width wordmark.
 
-- *Services* — asymmetric editorial grid of five chapters with varied spans and ratios.
-- *Service detail* — overview with a two-photo collage; treatments laid out like a printed menu
-  with a sticky group index; "next chapters" row.
-- *Packages* — everyday sets as a two-column ledger (her / him); occasion rituals as tier
-  columns beside an arched photograph.
-- *About* — story with drop cap and arch collage; promise on a night band.
-- *Contact* — oversized phone/email typography beside a minimal underline form.
+**Inner pages** keep their `PageHero`-led editorial compositions and pick up the new fonts.
 
 ## Imagery
 
-- The two real lounge photographs appear once each (Lounge band, About).
-- Treatment photography comes from Unsplash (free licence), one distinct photo per role — see
-  `public/images/` folders `cover`, `services`, `lookbook`, `rituals`, `notes`, `atmosphere`.
+- Treatment photography comes from Unsplash (free licence); lookbook stills and reels come from
+  the salon's Instagram (`public/images/lookbook`, `public/videos/instagram`).
+- `about/salon-interior.jpg` is 640×480 with baked-in letterbox bars — only use it small and
+  cropped 16:9.
 - Consistent treatment: natural colour, no filters, `object-cover` with deliberate focal points.
 
 ## Logo

@@ -30,8 +30,8 @@ export function Finale() {
     >
       <div className="shell">
         <div className="flex flex-wrap items-baseline justify-between gap-4">
-          <p className="m-0 font-heading text-2xl text-ink italic md:text-3xl">{finale.kicker}</p>
-          <p className="m-0 font-script text-2xl text-ink/80">{visit.signature}</p>
+          <p className="m-0 font-heading text-2xl text-ink italic md:text-3xl dark:text-primary-foreground">{finale.kicker}</p>
+          <p className="m-0 font-script text-2xl text-ink/80 dark:text-primary-foreground/80">{visit.signature}</p>
         </div>
 
         <h2 id="finale-title" className="mt-10 mb-0 type-mega text-night-ink md:mt-14">

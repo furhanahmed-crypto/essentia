@@ -44,7 +44,7 @@ export async function SiteFooter() {
     <footer className="band-night overflow-hidden pb-14 lg:pb-0">
       <div className="shell pt-20 md:pt-24">
         <div className="grid gap-12 md:grid-cols-2 lg:grid-cols-12">
-          <div className="lg:col-span-5">
+          <div className="lg:col-span-4">
             <p className="m-0 max-w-sm font-heading text-3xl leading-tight text-night-ink">
               Hair, skin, grooming, nails and makeup — considered, in Attapur.
             </p>
@@ -67,7 +67,7 @@ export async function SiteFooter() {
               </a>
             </div>
           </div>
-          <div className="lg:col-span-2 lg:col-start-7">
+          <div className="lg:col-span-2 lg:col-start-6">
             <Column title="Studio">
               <LinkList links={FOOTER_LINKS} />
             </Column>

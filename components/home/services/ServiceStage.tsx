@@ -44,7 +44,7 @@ export function ServiceStage() {
           {SERVICES.map((item, index) => (
             <div key={item.slug} data-state={layerState(index)} className="stage-layer absolute inset-0">
               <div className="absolute inset-0">
-                <Image src={item.image} alt={item.imageAlt} fill sizes="58vw" className="object-cover" priority={index === 0} />
+                <Image src={item.image} alt={item.imageAlt} fill sizes="58vw" className="object-cover" loading="eager" />
               </div>
             </div>
           ))}

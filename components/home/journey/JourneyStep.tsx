@@ -8,11 +8,12 @@ import type { JourneyStep as Step } from "@/types/home/content";
 import { indexOf } from "@/utils/emphasis";
 
 // Each movement gets its own frame: a tall portrait, an arch (the lounge mirror), a glowing circle.
+// On desktop the frames are sized by viewport height so every movement fits the pinned track.
 const FRAME = [
   "",
-  "aspect-[3/4] w-[min(100%,20rem)]",
-  "aspect-[3/4] w-[min(100%,19rem)] rounded-t-full",
-  "aspect-square w-[min(100%,20rem)] rounded-full ring-[14px] ring-background/70 shadow-[0_0_80px_10px_rgba(121,167,151,0.45)]",
+  "aspect-[3/4] w-[min(100%,20rem)] lg:h-[min(26rem,48svh)] lg:w-auto",
+  "aspect-[3/4] w-[min(100%,19rem)] rounded-t-full lg:h-[min(26rem,48svh)] lg:w-auto",
+  "aspect-square w-[min(100%,20rem)] rounded-full ring-[14px] ring-background/70 shadow-[0_0_80px_10px_rgba(121,167,151,0.45)] lg:h-[min(20rem,38svh)] lg:w-auto",
 ] as const;
 
 function StepText({ step, position }: { step: Step; position: number }) {
@@ -50,7 +51,7 @@ export function JourneyStep({ step, position }: { step: Step; position: number }
 
   const reversed = position === 2;
   return (
-    <div className={cn("journey-step flex flex-col gap-8 lg:items-center", reversed ? "lg:flex-col-reverse" : "lg:flex-row lg:gap-12")}>
+    <div className={cn("journey-step flex flex-col gap-8 lg:gap-12", reversed ? "lg:flex-row-reverse lg:items-end" : "lg:flex-row lg:items-center")}>
       <div className={cn("relative shrink-0 overflow-hidden bg-mist", FRAME[position])}>
         <Image src={step.image} alt={step.imageAlt ?? ""} fill sizes="320px" className="object-cover" />
       </div>

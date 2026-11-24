@@ -8,42 +8,126 @@
     "inset": "/images/cover/cover-hair.jpg",
     "insetAlt": "A freshly finished glossy brown bob, seen from behind, in front of a round salon mirror",
     "caption": "The finish — Hair studio",
-    "primaryCta": { "label": "Explore", "href": "/services" },
-    "secondaryCta": { "label": "WhatsApp us" }
+    "primaryCta": {
+      "label": "Explore",
+      "href": "/services"
+    },
+    "secondaryCta": {
+      "label": "WhatsApp us"
+    }
   },
   "story": {
     "label": "The lounge",
     "frames": [
-      { "line": "One calm address", "image": "/images/about/salon-interior.jpg", "imageAlt": "Essentia lounge with pale sage chairs, white vanity and arched LED mirrors" },
-      { "line": "for hair, skin & nails —", "image": "/images/cover/cover-inset.jpg", "imageAlt": "Hand with soft nude gel manicure resting on white fur" },
-      { "line": "care that feels exceptional.", "image": "/images/services/skin.jpg", "imageAlt": "Therapist brushing a nourishing mask onto a guest's face" }
+      {
+        "line": "One calm address",
+        "image": "/images/about/salon-interior.jpg",
+        "imageAlt": "Essentia lounge with pale sage chairs, white vanity and arched LED mirrors"
+      },
+      {
+        "line": "for hair, skin & nails —",
+        "image": "/images/cover/cover-inset.jpg",
+        "imageAlt": "Hand with soft nude gel manicure resting on white fur"
+      },
+      {
+        "line": "care that feels exceptional.",
+        "image": "/images/services/skin.jpg",
+        "imageAlt": "Therapist brushing a nourishing mask onto a guest's face"
+      }
     ],
     "facts": [
-      { "value": "05", "label": "Service disciplines under one roof" },
-      { "value": "Unisex", "label": "Considered care for women and men" },
-      { "value": "7 days", "label": "Open by appointment, Mon–Sun" }
+      {
+        "value": "05",
+        "label": "Service disciplines under one roof"
+      },
+      {
+        "value": "Unisex",
+        "label": "Considered care for women and men"
+      },
+      {
+        "value": "7 days",
+        "label": "Open by appointment, Mon–Sun"
+      }
     ],
-    "cta": { "label": "Our story", "href": "/about" }
+    "cta": {
+      "label": "Our story",
+      "href": "/about"
+    }
   },
   "menu": {
     "label": "The Menu",
     "title": "Five disciplines, one standard.",
     "lede": "Every family of treatments has its own specialists, products and pace. Choose where to begin.",
-    "cta": { "label": "All services", "href": "/services" }
+    "cta": {
+      "label": "All services",
+      "href": "/services"
+    }
   },
   "lookbook": {
     "label": "In the chair",
     "title": "Recent finishes",
     "lede": "Real finishes from the lounge — photos and reels from our chair.",
     "items": [
-      { "video": "/videos/instagram/reel-02.mp4", "image": "/images/lookbook/ig-02.jpg", "alt": "Reel — wedding glow-up at Essentia", "caption": "Wedding glow-up", "service": "makeup", "weight": "feature" },
-      { "image": "/images/lookbook/ig-01.jpg", "alt": "Guest after a permanent blowdry at Essentia Salon Lounge", "caption": "Permanent blowdry", "service": "hair", "weight": "small" },
-      { "image": "/images/lookbook/ig-05.jpg", "alt": "Layered blowdry finish seen from behind in the salon chair", "caption": "Cut & style", "service": "hair", "weight": "tall" },
-      { "video": "/videos/instagram/reel-01.mp4", "image": "/images/lookbook/ig-04.jpg", "alt": "Reel — frizzy hair transformed with a permanent blowdry", "caption": "Smooth transformation", "service": "hair", "weight": "feature" },
-      { "image": "/images/lookbook/ig-07.jpg", "alt": "Glossy permanent blowdry curls in the Essentia chair", "caption": "Gloss & body", "service": "hair", "weight": "small" },
-      { "video": "/videos/instagram/reel-03.mp4", "image": "/images/lookbook/ig-03.jpg", "alt": "Reel — fresh look with the right details at Essentia", "caption": "Fresh details", "service": "hair", "weight": "tall" },
-      { "image": "/images/lookbook/ig-02.jpg", "alt": "Client in the Essentia lounge sharing her finish", "caption": "Lounge finish", "service": "hair", "weight": "small" },
-      { "video": "/videos/instagram/reel-04.mp4", "image": "/images/lookbook/ig-07.jpg", "alt": "Reel — every strand cared for at Essentia", "caption": "Strand care", "service": "hair", "weight": "tall" }
+      {
+        "video": "/videos/instagram/reel-02.mp4",
+        "image": "/images/lookbook/ig-02.jpg",
+        "alt": "Reel — wedding glow-up at Essentia",
+        "caption": "Wedding glow-up",
+        "service": "makeup",
+        "weight": "feature"
+      },
+      {
+        "image": "/images/lookbook/ig-01.jpg",
+        "alt": "Guest after a permanent blowdry at Essentia Salon Lounge",
+        "caption": "Permanent blowdry",
+        "service": "hair",
+        "weight": "small"
+      },
+      {
+        "image": "/images/lookbook/ig-05.jpg",
+        "alt": "Layered blowdry finish seen from behind in the salon chair",
+        "caption": "Cut & style",
+        "service": "hair",
+        "weight": "tall"
+      },
+      {
+        "video": "/videos/instagram/reel-01.mp4",
+        "image": "/images/lookbook/ig-04.jpg",
+        "alt": "Reel — frizzy hair transformed with a permanent blowdry",
+        "caption": "Smooth transformation",
+        "service": "hair",
+        "weight": "feature"
+      },
+      {
+        "image": "/images/lookbook/ig-07.jpg",
+        "alt": "Glossy permanent blowdry curls in the Essentia chair",
+        "caption": "Gloss & body",
+        "service": "hair",
+        "weight": "small"
+      },
+      {
+        "video": "/videos/instagram/reel-03.mp4",
+        "image": "/images/lookbook/ig-03.jpg",
+        "alt": "Reel — fresh look with the right details at Essentia",
+        "caption": "Fresh details",
+        "service": "hair",
+        "weight": "tall"
+      },
+      {
+        "image": "/images/lookbook/ig-02.jpg",
+        "alt": "Client in the Essentia lounge sharing her finish",
+        "caption": "Lounge finish",
+        "service": "hair",
+        "weight": "small"
+      },
+      {
+        "video": "/videos/instagram/reel-04.mp4",
+        "image": "/images/lookbook/ig-07.jpg",
+        "alt": "Reel — every strand cared for at Essentia",
+        "caption": "Strand care",
+        "service": "hair",
+        "weight": "tall"
+      }
     ]
   },
   "occasions": {
@@ -66,26 +150,76 @@
         "message": "Hi, I'd like to know more about the groom packages at Essentia."
       }
     ],
-    "cta": { "label": "See every package", "href": "/packages" }
+    "cta": {
+      "label": "See every package",
+      "href": "/packages"
+    }
   },
   "manifesto": {
     "label": "Why Essentia",
     "title": "Care that feels intentional.",
     "principles": [
-      { "word": "Premium.", "title": "Premium products", "text": "L’Oréal, Nashi, Olaplex, Skeyndor and more — chosen for reliable, lasting results.", "image": "/images/atmosphere/bottles.jpg", "imageAlt": "Amber salon product bottles and conditioner jars" },
-      { "word": "Unisex.", "title": "Unisex expertise", "text": "Hair, skin and grooming for women and men, under one thoughtful roof.", "image": "/images/services/grooming.jpg", "imageAlt": "Barber trimming a full beard with scissors" },
-      { "word": "Signature.", "title": "Signature packages", "text": "Pre-bridal, groom and grooming sets that take the guesswork away.", "image": "/images/services/makeup-bridal.jpg", "imageAlt": "Bride in red with detailed bridal makeup and gold jewellery" },
-      { "word": "Lounge.", "title": "Lounge atmosphere", "text": "Bright mirrors, soft seating and a pace that never feels rushed.", "image": "/images/about/salon-interior.jpg", "imageAlt": "Essentia lounge with pale sage chairs, white vanity and arched LED mirrors" }
-    ]
+      {
+        "word": "Premium.",
+        "title": "Premium products",
+        "text": "L’Oréal, Nashi, Olaplex, Skeyndor and more — chosen for reliable, lasting results.",
+        "image": "/images/atmosphere/bottles.jpg",
+        "imageAlt": "Amber salon product bottles and conditioner jars",
+        "href": "/services"
+      },
+      {
+        "word": "Unisex.",
+        "title": "Unisex expertise",
+        "text": "Hair, skin and grooming for women and men, under one thoughtful roof.",
+        "image": "/images/services/grooming.jpg",
+        "imageAlt": "Barber trimming a full beard with scissors",
+        "href": "/services/grooming"
+      },
+      {
+        "word": "Signature.",
+        "title": "Signature packages",
+        "text": "Pre-bridal, groom and grooming sets that take the guesswork away.",
+        "image": "/images/services/makeup-bridal.jpg",
+        "imageAlt": "Bride in red with detailed bridal makeup and gold jewellery",
+        "href": "/packages"
+      },
+      {
+        "word": "Lounge.",
+        "title": "Lounge atmosphere",
+        "text": "Bright mirrors, soft seating and a pace that never feels rushed.",
+        "image": "/images/atmosphere/towels.jpg",
+        "imageAlt": "Fresh folded white towels in soft light",
+        "href": "/about"
+      }
+    ],
+    "lede": "Four reasons guests keep returning to Pillar No. 160."
   },
   "journey": {
     "label": "Your visit, in four movements",
     "title": "The visit",
     "steps": [
-      { "title": "Reach out", "text": "Call, WhatsApp or walk in at Pillar No. 160, Attapur." },
-      { "title": "Consult", "text": "We listen first — hair, skin and the occasion ahead.", "image": "/images/services/brows-detail.jpg", "imageAlt": "Specialist shaping a guest's brow with tweezers" },
-      { "title": "Settle in", "text": "The lounge slows down while our team does the craft.", "image": "/images/services/skin-massage.jpg", "imageAlt": "Guest receiving a relaxing facial massage" },
-      { "title": "Leave glowing", "text": "A finish that feels like you, only elevated.", "image": "/images/notes/party.jpg", "imageAlt": "Close-up of luminous party makeup with a matte rose lip" }
+      {
+        "title": "Reach out",
+        "text": "Call, WhatsApp or walk in at Pillar No. 160, Attapur."
+      },
+      {
+        "title": "Consult",
+        "text": "We listen first — hair, skin and the occasion ahead.",
+        "image": "/images/services/brows-detail.jpg",
+        "imageAlt": "Specialist shaping a guest's brow with tweezers"
+      },
+      {
+        "title": "Settle in",
+        "text": "The lounge slows down while our team does the craft.",
+        "image": "/images/services/skin-massage.jpg",
+        "imageAlt": "Guest receiving a relaxing facial massage"
+      },
+      {
+        "title": "Leave glowing",
+        "text": "A finish that feels like you, only elevated.",
+        "image": "/images/notes/party.jpg",
+        "imageAlt": "Close-up of luminous party makeup with a matte rose lip"
+      }
     ]
   },
   "faq": {
@@ -172,7 +306,10 @@
   },
   "finale": {
     "kicker": "Come in. Sit down.",
-    "words": ["Leave", "glowing."],
+    "words": [
+      "Leave",
+      "glowing."
+    ],
     "lede": "Message the lounge and we'll find a time that suits you — seven days a week, by appointment."
   }
 }

@@ -34,6 +34,8 @@ export type Principle = {
   text: string;
   image: string;
   imageAlt: string;
+  /** Where the bento tile leads (a service, packages or about). */
+  href: string;
 };
 
 export type JourneyStep = {
