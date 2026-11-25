@@ -3,10 +3,10 @@
     "kicker": "The Salon Lounge — Attapur, Hyderabad",
     "title": "Essential care, *exceptionally* done.",
     "lede": "Hair, skin, grooming, nails and makeup for women and men — practised with calm precision in a lounge built for everyday luxury.",
-    "image": "/images/atmosphere/wash.jpg",
-    "imageAlt": "Stylist rinsing a guest's long hair at a white backwash basin",
-    "inset": "/images/cover/cover-hair.jpg",
-    "insetAlt": "A freshly finished glossy brown bob, seen from behind, in front of a round salon mirror",
+    "image": "/images/salon/blowdry-finish.jpg",
+    "imageAlt": "Guest's long dark hair blow-dried to a glossy finish in an Essentia styling chair",
+    "inset": "/images/finishes/hair-caramel-balayage.jpg",
+    "insetAlt": "Stylist showing a soft caramel balayage finish in the Essentia lounge",
     "caption": "The finish — Hair studio",
     "primaryCta": {
       "label": "Explore",
@@ -26,13 +26,13 @@
       },
       {
         "line": "for hair, skin & nails —",
-        "image": "/images/cover/cover-inset.jpg",
-        "imageAlt": "Hand with soft nude gel manicure resting on white fur"
+        "image": "/images/nails/gel-manicure-nude.jpg",
+        "imageAlt": "Nail technician finishing a glossy nude gel manicure at Essentia"
       },
       {
         "line": "care that feels exceptional.",
-        "image": "/images/services/skin.jpg",
-        "imageAlt": "Therapist brushing a nourishing mask onto a guest's face"
+        "image": "/images/finishes/skin-mens-facial.jpg",
+        "imageAlt": "Male guest relaxing during a facial with a sheet mask at Essentia"
       }
     ],
     "facts": [
@@ -66,67 +66,108 @@
   "lookbook": {
     "label": "In the chair",
     "title": "Recent finishes",
-    "lede": "Real finishes from the lounge — photos and reels from our chair.",
+    "lede": "Real finishes from the lounge — filmed in our chairs at Pillar No. 160.",
     "items": [
       {
-        "video": "/videos/instagram/reel-02.mp4",
-        "image": "/images/lookbook/ig-02.jpg",
-        "alt": "Reel — wedding glow-up at Essentia",
-        "caption": "Wedding glow-up",
-        "service": "makeup",
-        "weight": "feature"
-      },
-      {
-        "image": "/images/lookbook/ig-01.jpg",
-        "alt": "Guest after a permanent blowdry at Essentia Salon Lounge",
-        "caption": "Permanent blowdry",
-        "service": "hair",
-        "weight": "small"
-      },
-      {
-        "image": "/images/lookbook/ig-05.jpg",
-        "alt": "Layered blowdry finish seen from behind in the salon chair",
-        "caption": "Cut & style",
-        "service": "hair",
-        "weight": "tall"
-      },
-      {
-        "video": "/videos/instagram/reel-01.mp4",
-        "image": "/images/lookbook/ig-04.jpg",
-        "alt": "Reel — frizzy hair transformed with a permanent blowdry",
-        "caption": "Smooth transformation",
+        "video": "/videos/finishes/hair-layered-blowout.mp4",
+        "image": "/images/finishes/hair-layered-blowout.jpg",
+        "alt": "Stylist lifting a glossy layered blowout to show its movement",
+        "caption": "Layered blowout",
         "service": "hair",
         "weight": "feature"
       },
       {
-        "image": "/images/lookbook/ig-07.jpg",
-        "alt": "Glossy permanent blowdry curls in the Essentia chair",
-        "caption": "Gloss & body",
-        "service": "hair",
+        "video": "/videos/finishes/nails-gel-manicure.mp4",
+        "image": "/images/finishes/nails-gel-manicure.jpg",
+        "alt": "Guest showing a deep plum gel manicure with an almond shape",
+        "caption": "Gel manicure",
+        "service": "nail",
         "weight": "small"
       },
       {
-        "video": "/videos/instagram/reel-03.mp4",
-        "image": "/images/lookbook/ig-03.jpg",
-        "alt": "Reel — fresh look with the right details at Essentia",
-        "caption": "Fresh details",
+        "video": "/videos/finishes/hair-caramel-balayage.mp4",
+        "image": "/images/finishes/hair-caramel-balayage.jpg",
+        "alt": "Hands running through soft caramel balayage at the backwash chair",
+        "caption": "Caramel balayage",
         "service": "hair",
         "weight": "tall"
       },
       {
-        "image": "/images/lookbook/ig-02.jpg",
-        "alt": "Client in the Essentia lounge sharing her finish",
-        "caption": "Lounge finish",
+        "video": "/videos/finishes/hair-bronze-curls.mp4",
+        "image": "/images/finishes/hair-bronze-curls.jpg",
+        "alt": "Long hair finished in bouncy bronze-toned curls",
+        "caption": "Bronze curls",
+        "service": "hair",
+        "weight": "feature"
+      },
+      {
+        "video": "/videos/finishes/skin-mens-facial.mp4",
+        "image": "/images/finishes/skin-mens-facial.jpg",
+        "alt": "Male guest receiving a facial with a hydrating sheet mask",
+        "caption": "Men's facial",
+        "service": "skin-care",
+        "weight": "small"
+      },
+      {
+        "video": "/videos/finishes/hair-caramel-layers.mp4",
+        "image": "/images/finishes/hair-caramel-layers.jpg",
+        "alt": "Voluminous caramel layers fanned out after a blow-dry",
+        "caption": "Caramel layers",
+        "service": "hair",
+        "weight": "tall"
+      },
+      {
+        "video": "/videos/finishes/hair-burgundy-layers.mp4",
+        "image": "/images/finishes/hair-burgundy-layers.jpg",
+        "alt": "Layered cut with burgundy-tinted ends, styled with volume",
+        "caption": "Burgundy layers",
         "service": "hair",
         "weight": "small"
       },
       {
-        "video": "/videos/instagram/reel-04.mp4",
-        "image": "/images/lookbook/ig-07.jpg",
-        "alt": "Reel — every strand cared for at Essentia",
-        "caption": "Strand care",
+        "video": "/videos/finishes/hair-caramel-ombre.mp4",
+        "image": "/images/finishes/hair-caramel-ombre.jpg",
+        "alt": "Shoulder-length layers with a caramel ombré, finished with a round brush",
+        "caption": "Caramel ombré",
         "service": "hair",
         "weight": "tall"
+      }
+    ]
+  },
+  "transformations": {
+    "label": "Before & after",
+    "title": "From frizz to *glass*.",
+    "lede": "Real guests, same chair, same light — drag the line to compare. Smoothing and finishing by the Essentia hair team.",
+    "pairs": [
+      {
+        "before": "/images/before-after/smoothing-01-before.jpg",
+        "after": "/images/before-after/smoothing-01-after.jpg",
+        "beforeAlt": "Before — long wavy hair in the Essentia chair",
+        "afterAlt": "After — smooth, glossy lengths with a soft blow-dried finish"
+      },
+      {
+        "before": "/images/before-after/smoothing-02-before.jpg",
+        "after": "/images/before-after/smoothing-02-after.jpg",
+        "beforeAlt": "Before — thick wavy lengths in the Essentia chair",
+        "afterAlt": "After — smooth, glossy lengths with a soft blow-dried finish"
+      },
+      {
+        "before": "/images/before-after/smoothing-03-before.jpg",
+        "after": "/images/before-after/smoothing-03-after.jpg",
+        "beforeAlt": "Before — wavy brunette hair in the Essentia chair",
+        "afterAlt": "After — smooth, glossy lengths with a soft blow-dried finish"
+      },
+      {
+        "before": "/images/before-after/smoothing-04-before.jpg",
+        "after": "/images/before-after/smoothing-04-after.jpg",
+        "beforeAlt": "Before — long curly lengths in the Essentia chair",
+        "afterAlt": "After — smooth, glossy lengths with a soft blow-dried finish"
+      },
+      {
+        "before": "/images/before-after/smoothing-05-before.jpg",
+        "after": "/images/before-after/smoothing-05-after.jpg",
+        "beforeAlt": "Before — voluminous wavy hair in the Essentia chair",
+        "afterAlt": "After — smooth, glossy lengths with a soft blow-dried finish"
       }
     ]
   },
@@ -171,8 +212,8 @@
         "word": "Unisex.",
         "title": "Unisex expertise",
         "text": "Hair, skin and grooming for women and men, under one thoughtful roof.",
-        "image": "/images/services/grooming.jpg",
-        "imageAlt": "Barber trimming a full beard with scissors",
+        "image": "/images/finishes/skin-mens-facial.jpg",
+        "imageAlt": "Male guest during a facial at Essentia",
         "href": "/services/grooming"
       },
       {
@@ -187,8 +228,8 @@
         "word": "Lounge.",
         "title": "Lounge atmosphere",
         "text": "Bright mirrors, soft seating and a pace that never feels rushed.",
-        "image": "/images/atmosphere/towels.jpg",
-        "imageAlt": "Fresh folded white towels in soft light",
+        "image": "/images/finishes/hair-caramel-layers.jpg",
+        "imageAlt": "Styling chair and arched mirrors in the Essentia lounge behind a fresh blow-dry",
         "href": "/about"
       }
     ],
@@ -217,8 +258,8 @@
       {
         "title": "Leave glowing",
         "text": "A finish that feels like you, only elevated.",
-        "image": "/images/notes/party.jpg",
-        "imageAlt": "Close-up of luminous party makeup with a matte rose lip"
+        "image": "/images/before-after/smoothing-01-after.jpg",
+        "imageAlt": "Sleek, glossy lengths after a smoothing treatment at Essentia"
       }
     ]
   },
@@ -257,8 +298,8 @@
         "quote": "The space feels premium without being stiff — my colour came out exactly as we discussed.",
         "name": "A regular guest",
         "role": "Hair colour",
-        "image": "/images/notes/colour.jpg",
-        "imageAlt": "Long hair with soft blended blonde colour"
+        "image": "/images/finishes/hair-caramel-balayage.jpg",
+        "imageAlt": "Soft caramel balayage finished at Essentia"
       },
       {
         "quote": "Pre-bridal sessions were paced perfectly. The team kept everything organised and calm.",
@@ -278,15 +319,15 @@
         "quote": "Hydrafacial left my skin calm and bright — no redness, just a clean glow for the week.",
         "name": "Skin care guest",
         "role": "Hydrafacial",
-        "image": "/images/notes/facial.jpg",
-        "imageAlt": "Therapist performing a gentle facial treatment"
+        "image": "/images/finishes/skin-mens-facial.jpg",
+        "imageAlt": "Guest relaxing during a facial at Essentia"
       },
       {
         "quote": "Gel polish and nail art held through a long wedding week. Precise work, lovely finish.",
         "name": "Nail art guest",
         "role": "Nail extensions",
-        "image": "/images/notes/nails.jpg",
-        "imageAlt": "Tortoiseshell and black gel nail art with a gold ring"
+        "image": "/images/finishes/nails-gel-manicure.jpg",
+        "imageAlt": "Plum gel manicure finished at Essentia"
       },
       {
         "quote": "Party makeup stayed soft on camera and comfortable through the evening. Will be back.",

@@ -52,3 +52,10 @@ export type GuestNote = {
   image: string;
   imageAlt: string;
 };
+
+export type BeforeAfterPair = {
+  before: string;
+  after: string;
+  beforeAlt: string;
+  afterAlt: string;
+};

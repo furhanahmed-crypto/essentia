@@ -44,19 +44,32 @@ export function Hero() {
       aria-labelledby="hero-title"
       className="band-night relative isolate flex min-h-[max(34rem,calc(100svh-var(--header-h)-3.5rem))] flex-col overflow-hidden lg:min-h-[max(36rem,calc(100svh-var(--header-h)))]"
     >
-      <div className="hero-photo absolute inset-0 -z-10">
-        <Image
-          src={hero.image}
-          alt={hero.imageAlt}
-          fill
-          priority
-          fetchPriority="high"
-          sizes="100vw"
-          className="object-cover object-[55%_40%]"
-        />
+      {/* Before / after as the backdrop: two portrait frames side by side on wide screens (each
+          half is close to the photo's own shape, so no heavy zoom), stacked on phones. */}
+      <div className="hero-photo absolute inset-0 -z-10 grid grid-rows-2 md:grid-cols-2 md:grid-rows-1">
+        {[
+          { src: hero.before, alt: hero.beforeAlt, tag: "Before" },
+          { src: hero.after, alt: hero.afterAlt, tag: "After" },
+        ].map((frame) => (
+          <figure key={frame.tag} className="relative m-0 overflow-hidden">
+            <Image
+              src={frame.src}
+              alt={frame.alt}
+              fill
+              priority
+              fetchPriority="high"
+              sizes="(max-width: 768px) 100vw, 50vw"
+              className="object-cover object-[50%_35%]"
+            />
+            <figcaption className="absolute top-14 left-1/2 -translate-x-1/2 border border-night-ink/40 bg-night/45 px-4 py-1.5 type-kicker tracking-[0.22em] text-night-ink uppercase backdrop-blur-sm md:top-16">
+              {frame.tag}
+            </figcaption>
+          </figure>
+        ))}
+        <span aria-hidden className="absolute inset-x-0 top-1/2 h-px bg-night-ink/50 md:inset-x-auto md:inset-y-0 md:top-0 md:left-1/2 md:h-auto md:w-px" />
       </div>
       <div aria-hidden className="absolute inset-0 -z-10 scrim-night" />
-      <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-r from-night/75 via-night/25 to-transparent" />
+      <div aria-hidden className="absolute inset-0 -z-10 bg-gradient-to-r from-night/60 via-night/15 to-transparent" />
 
       <div className="hero-meta shell flex items-start justify-between gap-6 pt-6 type-kicker tracking-[0.16em] text-night-ink/80 uppercase">
         <span>{hero.kicker}</span>

@@ -10,6 +10,7 @@ import { Notes } from "@/components/home/notes/Notes";
 import { Occasions } from "@/components/home/occasions/Occasions";
 import { ServiceStage } from "@/components/home/services/ServiceStage";
 import { Story } from "@/components/home/story/Story";
+import { Transformations } from "@/components/home/transformations/Transformations";
 import home from "@/constants/home/content.json";
 import { BRAND } from "@/constants/brand";
 import { ROUTES } from "@/constants/routes";
@@ -31,6 +32,7 @@ export default function HomePage() {
       <Story />
       <ServiceStage />
       <Gallery />
+      <Transformations />
       <Occasions />
       <Manifesto />
       <Journey />

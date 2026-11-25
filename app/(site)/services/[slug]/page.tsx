@@ -6,6 +6,7 @@ import { VisitBand } from "@/components/shared/VisitBand";
 import { NextChapters } from "@/components/services/NextChapters";
 import { ServiceOverview } from "@/components/services/ServiceOverview";
 import { TreatmentMenu } from "@/components/services/TreatmentMenu";
+import { Transformations } from "@/components/home/transformations/Transformations";
 import content from "@/constants/services/content.json";
 import { ROUTES, servicePath } from "@/constants/routes";
 import { SERVICES, findService } from "@/constants/services";
@@ -53,6 +54,8 @@ export default async function ServicePage({ params }: Props) {
       />
       <ServiceOverview service={service} label={copy.overviewLabel} />
       <TreatmentMenu groups={service.groups} label={copy.listLabel} title={copy.listTitle} note={copy.listNote} />
+      {/* The salon's before & after results are hair smoothing — shown on the Hair chapter only. */}
+      {service.slug === "hair" ? <Transformations /> : null}
       <NextChapters items={related} label={copy.relatedLabel} title={copy.relatedTitle} />
       <VisitBand pathname={servicePath(service.slug)} />
     </>

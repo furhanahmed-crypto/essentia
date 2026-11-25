@@ -81,9 +81,12 @@ All timelines use GSAP + ScrollTrigger with the Lenis bridge (`components/motion
 3. *Services* — night stage: a vertical index of the five families (ARIA tablist; hover, click,
    arrows) beside a large photo that wipes in from the right over the last, with name, summary,
    signature treatments and a link. Mobile: a snap row of photo tiles above the details.
-4. *Gallery* — four masonry columns of mixed proportions (reels 9:16, stills 4:5 and square)
+4. *Gallery* — client reels only. four masonry columns of mixed proportions (reels 9:16, stills 4:5 and square)
    with vertical captions; columns drift at different speeds; reels play only while visible.
    Instagram stills are small, so frames never exceed ~360px wide.
+4b. *Before & after* — ivory: headline + guest thumbnails left, a drag-to-compare frame right
+   (`components/shared/BeforeAfterSlider`, a native range input over two stacked photos, so touch
+   and arrow keys work). Also shown on the Hair chapter.
 5. *Occasions* — Bride and Groom as two full-height photographs side by side; the half you
    point at widens. Tier names from `packages.json`, WhatsApp enquiry per side, no prices.
 6. *Why Essentia (bento)* — full sage. A 12-column bento: a cream intro card, one tall photo
@@ -106,8 +109,22 @@ All timelines use GSAP + ScrollTrigger with the Lenis bridge (`components/motion
 
 ## Imagery
 
-- Treatment photography comes from Unsplash (free licence); lookbook stills and reels come from
-  the salon's Instagram (`public/images/lookbook`, `public/videos/instagram`).
+Client media (shot in the lounge) comes first; Unsplash stock (free licence) only fills subjects the
+client has not supplied yet (makeup, bridal, grooming, products).
+
+| Folder | Contents | Used in |
+| --- | --- | --- |
+| `public/images/salon/` | `blowdry-finish.jpg` — the lounge, real guest | Hero, Hair chapter |
+| `public/images/nails/` | `gel-manicure-nude.jpg` | Story, Nail chapter |
+| `public/images/finishes/` | Poster frames for each reel (same names as the videos) | Gallery posters, hero inset, bento, notes, chapter collages |
+| `public/videos/finishes/` | 8 client reels: `hair-*`, `nails-gel-manicure`, `skin-mens-facial` (H.264, 540×960, muted loop) | Gallery ("Recent finishes") |
+| `public/images/before-after/` | `smoothing-NN-before.jpg` / `smoothing-NN-after.jpg`, cropped from the client's side-by-side collages and matched in size | Before & after section (home, Hair chapter) |
+
+Adding media: name files `<service>-<look>` in kebab case; convert `.mov` with
+`avconvert -p Preset960x540` (QuickTime/HEVC does not play in every browser) and keep a poster in
+`images/finishes/` with the same name. New before/after pairs go in `constants/home/content.json`
+→ `transformations.pairs`.
+
 - `about/salon-interior.jpg` is 640×480 with baked-in letterbox bars — only use it small and
   cropped 16:9.
 - Consistent treatment: natural colour, no filters, `object-cover` with deliberate focal points.
