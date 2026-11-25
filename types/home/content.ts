@@ -59,3 +59,12 @@ export type BeforeAfterPair = {
   beforeAlt: string;
   afterAlt: string;
 };
+
+export type HeroFrameItem = {
+  src: string;
+  alt: string;
+  /** Short name used in the side index and the live caption, e.g. "Smoothing". */
+  title: string;
+  /** Editorial caption printed on the frame's mat, e.g. "No. 01 — Smoothing". */
+  label: string;
+};

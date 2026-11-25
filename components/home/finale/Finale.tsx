@@ -26,15 +26,15 @@ export function Finale() {
     <section
       ref={area}
       aria-labelledby="finale-title"
-      className="relative overflow-hidden bg-gradient-to-b from-primary via-accent-deep to-night pt-20 pb-16 md:pt-28"
+      className="relative overflow-hidden border-t border-border bg-background pt-20 pb-16 md:pt-28"
     >
       <div className="shell">
         <div className="flex flex-wrap items-baseline justify-between gap-4">
-          <p className="m-0 font-heading text-2xl text-ink italic md:text-3xl dark:text-primary-foreground">{finale.kicker}</p>
-          <p className="m-0 font-script text-2xl text-ink/80 dark:text-primary-foreground/80">{visit.signature}</p>
+          <p className="m-0 font-heading text-2xl text-ink italic md:text-3xl">{finale.kicker}</p>
+          <p className="m-0 font-script text-2xl text-accent-deep">{visit.signature}</p>
         </div>
 
-        <h2 id="finale-title" className="mt-10 mb-0 type-mega text-night-ink md:mt-14">
+        <h2 id="finale-title" className="mt-10 mb-0 type-mega text-ink md:mt-14">
           {finale.words.map((word) => (
             <span key={word} className="block last:pl-[12vw]">
               {word}
@@ -44,12 +44,12 @@ export function Finale() {
 
         <div className="mt-12 flex flex-col gap-12 md:mt-16 md:flex-row md:items-end md:justify-between">
           <div className="max-w-md">
-            <p className="m-0 text-sm leading-relaxed text-night-ink/80">{finale.lede}</p>
+            <p className="m-0 text-sm leading-relaxed text-muted-foreground">{finale.lede}</p>
             <dl className="mt-8 mb-0 grid gap-5 sm:grid-cols-3 sm:gap-8">
               {details.map((detail) => (
                 <div key={detail.term}>
-                  <dt className="type-kicker tracking-[0.14em] text-night-ink/55 uppercase">{detail.term}</dt>
-                  <dd className="mt-1.5 mb-0 text-sm text-night-ink">
+                  <dt className="type-kicker tracking-[0.14em] text-ink/55 uppercase">{detail.term}</dt>
+                  <dd className="mt-1.5 mb-0 text-sm text-ink">
                     {detail.href ? (
                       <a href={detail.href} className="link-draw" target={detail.href.startsWith("http") ? "_blank" : undefined} rel="noopener">
                         {detail.value}
@@ -68,7 +68,7 @@ export function Finale() {
             href={WA.contact}
             target="_blank"
             rel="noopener"
-            className="grid size-40 shrink-0 place-items-center self-end rounded-full bg-night-ink text-night transition-colors duration-500 hover:bg-primary hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-night-ink md:size-48"
+            className="grid size-40 shrink-0 place-items-center self-end rounded-full bg-ink text-background transition-colors duration-500 hover:bg-primary hover:text-white focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-ink md:size-48"
           >
             <span className="flex flex-col items-center gap-2 type-kicker tracking-[0.16em] uppercase">
               <Icon icon={faWhatsapp} className="text-3xl" />

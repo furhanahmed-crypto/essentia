@@ -3,17 +3,81 @@
     "kicker": "The Salon Lounge — Attapur, Hyderabad",
     "title": "Essential care, *exceptionally* done.",
     "lede": "Hair, skin, grooming, nails and makeup for women and men — practised with calm precision in a lounge built for everyday luxury.",
-    "image": "/images/salon/blowdry-finish.jpg",
-    "imageAlt": "Guest's long dark hair blow-dried to a glossy finish in an Essentia styling chair",
-    "inset": "/images/finishes/hair-caramel-balayage.jpg",
-    "insetAlt": "Stylist showing a soft caramel balayage finish in the Essentia lounge",
-    "caption": "The finish — Hair studio",
     "primaryCta": {
       "label": "Explore",
       "href": "/services"
     },
     "secondaryCta": {
       "label": "WhatsApp us"
+    },
+    "frames": [
+      {
+        "src": "/images/finishes/hair-caramel-balayage.jpg",
+        "alt": "Hands running through soft caramel balayage at the backwash chair",
+        "title": "Caramel balayage",
+        "label": "No. 04 — Caramel balayage"
+      },
+      {
+        "src": "/images/finishes/hair-caramel-layers.jpg",
+        "alt": "Voluminous caramel layers fanned out after a blow-dry at Essentia",
+        "title": "Caramel layers",
+        "label": "No. 02 — Caramel layers"
+      },
+      {
+        "src": "/images/before-after/smoothing-01-after.jpg",
+        "alt": "Long dark hair smoothed to a glossy, straight finish at Essentia",
+        "title": "Smoothing",
+        "label": "No. 01 — Smoothing"
+      },
+      {
+        "src": "/images/finishes/hair-bronze-curls.jpg",
+        "alt": "Long hair finished in bouncy bronze-toned curls at Essentia",
+        "title": "Bronze curls",
+        "label": "No. 03 — Bronze curls"
+      },
+      {
+        "src": "/images/finishes/hair-burgundy-layers.jpg",
+        "alt": "Layered cut with burgundy-tinted ends, styled with volume",
+        "title": "Burgundy layers",
+        "label": "No. 05 — Burgundy layers"
+      }
+    ],
+    "tagline": "Hair · Skin · Grooming · Nails · Makeup",
+    "edit": {
+      "kicker": "The Finish Edit",
+      "volume": "Vol. 01 — Hair studio",
+      "hint": "Select a look",
+      "coordinates": "17.37° N · 78.42° E",
+      "seal": "Essentia · The Salon Lounge · Attapur · "
+    },
+    "finale": {
+      "kicker": "The Salon Lounge · Attapur, Hyderabad",
+      "primary": {
+        "label": "Explore the menu",
+        "href": "/services"
+      },
+      "secondary": {
+        "label": "WhatsApp the lounge"
+      },
+      "facts": [
+        {
+          "value": "05",
+          "label": "Disciplines"
+        },
+        {
+          "value": "Unisex",
+          "label": "Women & men"
+        },
+        {
+          "value": "7 days",
+          "label": "By appointment"
+        },
+        {
+          "value": "Pillar 160",
+          "label": "Attapur"
+        }
+      ],
+      "cue": "Into the lounge"
     }
   },
   "story": {

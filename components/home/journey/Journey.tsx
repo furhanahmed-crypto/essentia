@@ -50,7 +50,7 @@ export function Journey() {
     <section
       ref={root}
       aria-labelledby="journey-title"
-      className="relative overflow-hidden bg-mist py-20 md:py-28 lg:flex lg:flex-col [&.is-pinned]:h-[calc(100svh-var(--header-h))] [&.is-pinned]:min-h-[40rem] [&.is-pinned]:py-12"
+      className="relative overflow-hidden bg-card py-20 md:py-28 lg:flex lg:flex-col [&.is-pinned]:h-[calc(100svh-var(--header-h))] [&.is-pinned]:min-h-[40rem] [&.is-pinned]:py-12"
     >
       <div className="shell flex items-end justify-between gap-6">
         <h2 id="journey-title" className="m-0 type-poster text-ink">

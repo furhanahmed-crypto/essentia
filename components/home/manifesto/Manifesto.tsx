@@ -52,10 +52,10 @@ export function Manifesto() {
     <section
       ref={root}
       aria-labelledby="manifesto-title"
-      className="bg-primary py-20 text-ink md:py-28 dark:text-primary-foreground"
+      className="bg-background py-20 text-ink md:py-28"
     >
       <div className="shell grid gap-4 sm:auto-rows-[19rem] sm:grid-cols-2 md:gap-5 lg:auto-rows-[minmax(18rem,calc((100svh-var(--header-h)-15rem)/2))] lg:grid-cols-12">
-        <div className="bento-cell flex flex-col justify-between gap-10 bg-card p-7 text-ink sm:col-span-2 lg:col-span-4 md:p-9">
+        <div className="bento-cell flex flex-col justify-between gap-10 border border-border bg-card p-7 text-ink sm:col-span-2 lg:col-span-4 md:p-9">
           <p className="m-0 type-kicker tracking-[0.18em] text-accent-deep uppercase">{manifesto.label}</p>
           <div>
             <h2 id="manifesto-title" className="m-0 font-heading text-[clamp(2.2rem,1rem+2.3vw,3.4rem)] leading-[1] tracking-[-0.03em] text-ink">

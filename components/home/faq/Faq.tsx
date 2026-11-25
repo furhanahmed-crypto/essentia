@@ -34,7 +34,7 @@ export function Faq() {
             <AccordionItem
               key={item.q}
               value={item.q}
-              className="rounded-3xl border border-ink/10 transition-colors duration-500 data-[open]:border-transparent data-[open]:bg-mist"
+              className="rounded-3xl border border-ink/10 transition-colors duration-500 data-[open]:border-transparent data-[open]:bg-background"
             >
               <AccordionTrigger className="gap-5 px-6 py-6 sm:px-8">
                 <span className="w-7 shrink-0 font-heading text-lg text-accent-deep tabular-nums">{indexOf(index + 1)}</span>

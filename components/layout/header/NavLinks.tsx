@@ -63,7 +63,7 @@ export function NavLinks({
               <DropdownMenuContent sideOffset={18} className="w-64 rounded-none border border-line p-2 shadow-[0_24px_48px_-24px_rgba(52,51,48,0.35)]">
                 <DropdownMenuItem
                   render={<Link prefetch={false} href={href} />}
-                  className="cursor-pointer rounded-none px-3 py-2.5 type-label text-ink/60 focus:bg-mist focus:text-ink"
+                  className="cursor-pointer rounded-none px-3 py-2.5 type-label text-ink/60 focus:bg-muted focus:text-ink"
                 >
                   All services
                 </DropdownMenuItem>
@@ -72,7 +72,7 @@ export function NavLinks({
                     key={child.href}
                     render={<Link prefetch={false} href={child.href} />}
                     className={cn(
-                      "flex cursor-pointer items-baseline gap-3 rounded-none px-3 py-2.5 font-heading text-[0.98rem] focus:bg-mist focus:text-ink",
+                      "flex cursor-pointer items-baseline gap-3 rounded-none px-3 py-2.5 font-heading text-[0.98rem] focus:bg-muted focus:text-ink",
                       pathname === child.href ? "text-accent-deep" : "text-ink",
                     )}
                   >

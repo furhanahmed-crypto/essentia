@@ -53,7 +53,7 @@ export function VisitBand({ pathname }: { pathname: string }) {
           <Cta
             href={whatsappLink(whatsappMessageFor(pathname))}
             external
-            className="bg-cream text-ink hover:bg-mist dark:bg-night-ink dark:text-night"
+            className="bg-cream text-ink hover:bg-background dark:bg-night-ink dark:text-night"
             icon={<Icon icon={faWhatsapp} className="text-base" />}
           >
             Plan a visit

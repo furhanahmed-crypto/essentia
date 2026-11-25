@@ -25,17 +25,16 @@ only combine them differently.
 | --- | --- | --- |
 | Warm Ivory | `#EEEAE4` | Page ground (`bg-background`) — story |
 | Soft Cream | `#F8F6F2` | Raised ground (`bg-card`) — gallery, FAQ |
-| Pale Sage | `#D8E3DC` | `bg-mist` — the visit journey, open FAQ items |
-| Muted Sage | `#79A797` | `bg-primary` — the full-sage bento, finale gradient |
-| Deep Sage | `#5F8A7B` | `accent-deep` — accessible sage text, finale gradient midpoint |
+| Pale Sage | `#D8E3DC` | `bg-mist` — image placeholders only; never a section ground |
+| Muted Sage | `#79A797` | `bg-primary` — accents only (hover fills, rules, dots, the hero bloom); never a section ground |
+| Deep Sage | `#5F8A7B` | `accent-deep` — accessible sage text, small marks |
 | Charcoal | `#343330` | Ink, and the night bands — hero, services, packages, testimonials, footer |
 
-On sage grounds text is charcoal (`text-ink`) in light mode and `text-primary-foreground` in dark
-mode, never cream (contrast).
+Sections never sit on a green ground: grounds are only `bg-background`, `bg-card` or the night
+band. Sage stays an accent colour.
 
 Home rhythm: **night hero** → ivory story → **night services** → cream gallery → **photo split** →
-**sage bento** → pale-sage journey → **night notes** → cream FAQ → sage-to-night finale →
-**night footer**.
+ivory bento → cream journey → **night notes** → cream FAQ → ivory finale → **night footer**.
 
 ## Typography
 
@@ -71,11 +70,62 @@ All timelines use GSAP + ScrollTrigger with the Lenis bridge (`components/motion
 
 ## Home compositions (`components/home/<section>/`)
 
-1. *Hero* — full-bleed salon photo on night, headline and lede bottom-left, a matted inset
-   portrait (cream passe-partout, hairline keyline, ruled caption), a round cream "Explore" seal
-   with sage type, and the spaced ESSENTIA wordmark at poster scale along the bottom edge. The
-   wordmark uses a full-em line box (`HeroWordmark`) so its capitals are never clipped. Intro:
-   photo un-clips and settles, letters rise, details fade in.
+1. *Hero — scroll-driven, five prints* (`components/home/hero/`). One tall section, three layers;
+   the page always scrolls natively (Lenis untouched, no pin, no scroll lock):
+   - `.hero-track` (280svh mobile, 360svh desktop) holds the sticky stage — prints, copy, side
+     furniture, set. One scrubbed GSAP timeline (`heroTimeline.ts`) runs over this track.
+   - A full-section absolute layer whose sticky child `.hero-word-layer` holds ESSENTIA, the sage
+     bloom and the discipline line. It stays centred after the stage has gone and is carried off
+     by the section's own bottom edge (a sticky element inside an absolute layer, so the release
+     is native and exact).
+   - `.hero-tail` (90svh) — runway during which the stage scrolls away behind the held word.
+   *Prints* (`HeroFrame`): five editorial prints in a fan of slots (0 front, ±1, ±2; geometry in
+   `heroSlots.ts`, in frame widths, scaled by `--frame-w`, `--spread`, centred at `--fan-y`; those
+   variables live on the section so both layers share them). Cream mat, caption margin, floating
+   keyline, layered shadow, a depth veil per slot.
+   *Re-stacking* (`heroSwap.ts`): one GSAP timeline per click tweens the `--slot-*` / `--nudge-*`
+   custom properties that `.hero-slot` reads. The prints in front of the chosen one ease aside
+   (`power2.out`, 0.5s) while the chosen print lifts and drifts in on a slow-in curve; at 0.32s,
+   once nothing overlaps it, z-index switches in one frame; then every print glides to its new
+   slot on one shared `power2.inOut` curve (≈ cubic-bezier(.65,0,.35,1), ~1.2s). Never locked:
+   each click kills the running swap and starts the next from the prints' current positions, so
+   rapid choices retarget seamlessly. React writes the pose vars only on first render
+   (`restSlot`); after that the timeline owns them. Choices are ignored once scrolling starts.
+   Lenis sets `gsap.ticker.lagSmoothing(0)`, so a throttled background tab can fast-forward a
+   swap — expected, not a bug.
+   *Editorial furniture* (`HeroEdit`, xl+): "The Finish Edit" index left; the front look, number,
+   a scroll-turned seal (hidden under 800px tall) and coordinates right; registration marks.
+   *Set* (`HeroBackdrop`, on the stage): static gradient key light, arched-mirror outline, floor
+   shadow; they move only with scroll.
+   *Sky* (`HeroSky`, `heroStars.ts`): a section-wide sticky layer behind the stage, so it stays
+   with the held word through the finale. Rim lights, beams, a faint nebula wash, then three
+   star depths (far / mid / near): each is one tiled background of tiny radial gradients
+   (seeded, so server and client match), painted once on an oversized layer. Each depth rises
+   continuously (`hero-sky-flow`: a linear CSS loop of exactly one tile height, so it never seams;
+   6 / 12 / 22 px/s at rest), sways on an alternating CSS drift (26–40s) and parallaxes on scroll
+   by its own factor (0.2 / 0.5 / 1 × 16% of the viewport over the section). Scroll speed drives
+   the flow (`heroSkySpeed.ts`): the animations' `playbackRate` follows ScrollTrigger velocity
+   (1 + v/320, clamped −5…8 — scrolling back briefly reverses it), then eases back to 1 over
+   ~1.6s, so the stars stay on the compositor and never jump. Over them, 26 tiny twinkling stars and six brighter
+   glints (dot, halo, hairline cross) placed in the margins, each on its own cycle. Grain and
+   vignette on top. No canvas, filters or JS loops; transform/opacity only; every sky animation
+   pauses while the hero is off-screen (`is-sky-live`) and is off under reduced motion.
+   *Sequence*: copy and furniture part → back prints scatter by slot → front print rises off →
+   E·S·S·E·N·T·I·A, which rests at caption size directly under the fan, launch one after another:
+   each bounces up to the exact centre of the screen while growing, landing in place so the full
+   word assembles at ~90% of the width with its letter spacing intact (targets computed from
+   layout in `wordGeometry`). E launches only after every print has left (timeline 4.7 of 11).
+   *Finale composition* (`HeroFinale`): sage bloom; the five prints return as a loose collage
+   around the word (`.hero-scatter`, each with a depth); a ruled kicker above the word; the
+   discipline line, an "Explore the menu" pill and a WhatsApp link below; a facts strip
+   (disciplines, unisex, hours, address; hidden on phones) and a centred scroll cue along the
+   foot → hold; stage scrolls away; the word holds the centre through the tail while the collage
+   drifts by depth (`buildHeroTail`), then everything leaves with the section.
+   *Header over the hero*: the section carries `data-header-dark`; `useOverDarkSection` (one
+   IntersectionObserver on the header strip) switches the sticky header to dark glass
+   (`bg-night/95`, light logo, inverse links, cream Enquire pill) while the hero is beneath it,
+   in both themes, and back to ivory after.
+   Reduced motion: one static screen with the word under the prints; prints still re-stack.
 2. *Story* — pinned: the three-line brand statement lights up line by line while three photos
    drift at different depths; the three facts land in the last frame.
 3. *Services* — night stage: a vertical index of the five families (ARIA tablist; hover, click,
@@ -89,21 +139,20 @@ All timelines use GSAP + ScrollTrigger with the Lenis bridge (`components/motion
    and arrow keys work). Also shown on the Hair chapter.
 5. *Occasions* — Bride and Groom as two full-height photographs side by side; the half you
    point at widens. Tier names from `packages.json`, WhatsApp enquiry per side, no prices.
-6. *Why Essentia (bento)* — full sage. A 12-column bento: a cream intro card, one tall photo
+6. *Why Essentia (bento)* — ivory ground. A 12-column bento: a cream intro card (hairline border), one tall photo
    tile across both rows and three square tiles (`components/home/manifesto/`). Each tile is a
    link; hovering or focusing zooms the photo, deepens the scrim, slides in an arrow and lifts the
    title and sentence (grid-rows 0fr → 1fr). Touch screens show the sentence without hover. Tiles
-   wipe up once on scroll. *Replaced the pinned word-by-word sequence, which opened on a 15%
-   ghost word and read as an empty sage screen for the first part of the pin.*
-7. *Journey* — pale sage, pinned horizontal walk through the four movements, each framed
+   wipe up once on scroll.
+7. *Journey* — cream (`bg-card`), pinned horizontal walk through the four movements, each framed
    differently (contact type, portrait, arch, glowing circle), with a progress line. Mobile: a
    vertical timeline.
 8. *Notes* — night: large photo with wipe transitions, the next guest tucked behind, the quote
    in Bodoni italic under an oversized mark; prev/next, counter, thumbnails, autoplay that
    pauses on hover/focus.
-9. *FAQ* — sticky poster title left, Base UI accordion right; the open item becomes a sage panel.
-10. *Finale* — sage melting into night, "Leave glowing." at mega scale, contact details, and a
-    magnetic round WhatsApp button. The footer below ends with the full-width wordmark.
+9. *FAQ* — sticky poster title left, Base UI accordion right; the open item becomes an ivory panel.
+10. *Finale* — ivory ground under a hairline, "Leave glowing." in ink at mega scale, contact
+    details, and a magnetic round WhatsApp button in solid ink. The footer below ends with the full-width wordmark.
 
 **Inner pages** keep their `PageHero`-led editorial compositions and pick up the new fonts.
 

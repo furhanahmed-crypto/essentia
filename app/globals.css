@@ -1011,3 +1011,165 @@
     opacity: 1;
   }
 }
+
+/* Hero (components/home/hero): starting states for the scroll timeline, set in CSS so the first
+   paint already matches frame 0 — no flash before GSAP takes over. Reduced motion skips the
+   sequence: static prints and copy, no wordmark or tagline. */
+@media (prefers-reduced-motion: no-preference) {
+  .hero-tagline,
+  .hero-scatter,
+  .hero-finale-kicker,
+  .hero-finale-actions,
+  .hero-finale-foot {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+@keyframes hero-cue {
+  from {
+    transform: translateY(-100%);
+  }
+  to {
+    transform: translateY(200%);
+  }
+}
+.hero-cue-dot {
+  animation: hero-cue 1.8s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-tagline,
+  .hero-scatter,
+  .hero-finale-kicker,
+  .hero-finale-actions,
+  .hero-finale-foot {
+    display: none;
+  }
+}
+
+/* Hero prints: each slot's resting pose. Offsets are in frame widths (--frame-w), x scaled by
+   --spread per breakpoint. Individual transform properties + transitions keep re-stacking on the
+   compositor and separate from the GSAP scroll transform on the parent figure. */
+.hero-slot {
+  translate:
+    calc(var(--slot-x) * var(--spread) * var(--frame-w) + var(--nudge-x, 0) * var(--frame-w))
+    calc(var(--slot-y) * var(--frame-w) + var(--nudge-y, 0) * var(--frame-w));
+  rotate: calc(var(--slot-r) + var(--nudge-r, 0deg));
+  scale: calc(var(--slot-s) * var(--nudge-s, 1));
+}
+/* Once the scroll sequence starts, prints are leaving the stage and can't be chosen. */
+.hero-scroll.is-playing .hero-print,
+.hero-scroll.is-playing .hero-edit button {
+  pointer-events: none;
+}
+
+/* Hero sky — idle star motion. Compositor-only (transform / opacity); paused off-screen. */
+@keyframes hero-sky-drift {
+  to {
+    transform: translate3d(var(--drift-x), var(--drift-y), 0);
+  }
+}
+.hero-sky-drift {
+  animation: hero-sky-drift var(--drift-s, 70s) ease-in-out infinite alternate;
+  will-change: transform;
+}
+/* The field rises by exactly one tile per loop, so the repeat is seamless. */
+@keyframes hero-sky-flow {
+  to {
+    transform: translate3d(0, var(--flow-y), 0);
+  }
+}
+.hero-sky-flow {
+  animation: hero-sky-flow var(--flow-s, 40s) linear infinite;
+  will-change: transform;
+}
+@keyframes hero-twinkle {
+  0%,
+  100% {
+    opacity: var(--tw-low, 0.25);
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.hero-twinkle {
+  background: radial-gradient(
+    circle,
+    var(--es-night-ink) 0 28%,
+    color-mix(in srgb, var(--es-night-ink) 35%, transparent) 45%,
+    transparent 70%
+  );
+  animation: hero-twinkle var(--tw-s, 7s) ease-in-out var(--tw-delay, 0s) infinite;
+}
+/* Brighter distant stars: dim most of the cycle, one slow glint, a hairline cross of light. */
+@keyframes hero-glint {
+  0%,
+  70%,
+  100% {
+    opacity: 0.4;
+    transform: translate(-50%, -50%) scale(0.7);
+  }
+  84% {
+    opacity: 1;
+    transform: translate(-50%, -50%) scale(1.15);
+  }
+}
+.hero-glint {
+  background:
+    linear-gradient(to right, transparent, color-mix(in srgb, var(--es-night-ink) 45%, transparent) 50%, transparent) center / 100% 1px no-repeat,
+    linear-gradient(to bottom, transparent, color-mix(in srgb, var(--es-night-ink) 45%, transparent) 50%, transparent) center / 1px 100% no-repeat,
+    radial-gradient(circle, var(--es-night-ink) 0 9%, color-mix(in srgb, var(--es-night-ink) 30%, transparent) 20%, transparent 55%);
+  transform: translate(-50%, -50%) scale(0.7);
+  opacity: 0.4;
+  animation: hero-glint var(--tw-s, 15s) ease-in-out var(--tw-delay, 0s) infinite;
+}
+.hero-scroll:not(.is-sky-live) .hero-sky :is(.hero-sky-drift, .hero-sky-flow, .hero-twinkle, .hero-glint) {
+  animation-play-state: paused;
+}
+
+/* Static photographic grain tile (one small SVG, rendered once, never animated). */
+.hero-grain {
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='160' height='160'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 0.9 0'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
+  background-size: 160px 160px;
+}
+
+/* Studio registration marks: a hairline cross at each corner of the fan. */
+.hero-mark::before,
+.hero-mark::after {
+  content: "";
+  position: absolute;
+  background: color-mix(in srgb, var(--es-night-ink) 35%, transparent);
+}
+.hero-mark::before {
+  inset: 50% 0 auto;
+  height: 1px;
+}
+.hero-mark::after {
+  inset: 0 auto 0 50%;
+  width: 1px;
+}
+
+/* The look's title in the side caption cross-fades in when the front print changes. */
+@keyframes hero-swap {
+  from {
+    opacity: 0;
+    transform: translateY(0.4em);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+.hero-swap {
+  animation: hero-swap 0.7s cubic-bezier(0.22, 1, 0.36, 1) both;
+}
+@media (prefers-reduced-motion: reduce) {
+  .hero-slot,
+  .hero-swap,
+  .hero-sky-drift,
+  .hero-sky-flow,
+  .hero-twinkle,
+  .hero-glint {
+    transition: none;
+    animation: none;
+  }
+}

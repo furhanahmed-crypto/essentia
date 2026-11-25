@@ -1,11 +1,10 @@
 import { cn } from "cn";
 
-export type BandTone = "ivory" | "cream" | "mist" | "night";
+export type BandTone = "ivory" | "cream" | "night";
 
 const TONES: Record<BandTone, string> = {
   ivory: "bg-background text-ink",
   cream: "bg-card text-ink",
-  mist: "bg-mist text-ink",
   night: "band-night",
 };
 

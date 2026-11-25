@@ -5,6 +5,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useTheme } from "next-themes";
 import { cn } from "cn";
+import { useOverDarkSection } from "@/hooks/useOverDarkSection";
 import { useScrolled } from "@/hooks/useScrolled";
 import { ThemeToggle } from "@/components/theme/ThemeToggle";
 import { BRAND } from "@/constants/brand";
@@ -15,7 +16,9 @@ import { NavLinks } from "./header/NavLinks";
 
 const emptySubscribe = () => () => undefined;
 
-// Solid masthead over the light hero — tightens slightly on scroll.
+// Masthead. Ivory by default; while a dark section (the home hero) sits beneath it, it turns to dark
+// glass — night tint, blur, ivory type, inverted Enquire — so it reads as part of that stage rather
+// than a light bar laid over it. Tightens slightly on scroll.
 export function SiteHeader() {
   const scrolled = useScrolled(24);
   const [open, setOpen] = useState(false);
@@ -23,13 +26,16 @@ export function SiteHeader() {
   const { resolvedTheme } = useTheme();
   const mounted = useSyncExternalStore(emptySubscribe, () => true, () => false);
   const dark = mounted && resolvedTheme === "dark";
+  const overDark = useOverDarkSection() && !open;
 
   return (
     <>
       <header
         className={cn(
-          "sticky top-0 z-50 border-b bg-background/92 backdrop-blur-md transition-[border-color,box-shadow] duration-500",
-          scrolled || open ? "border-line" : "border-transparent",
+          "sticky top-0 z-50 border-b backdrop-blur-md transition-[background-color,border-color] duration-500",
+          overDark
+            ? "border-night-ink/10 bg-night/95 backdrop-blur-xl"
+            : cn("bg-background/92", scrolled || open ? "border-line" : "border-transparent"),
         )}
       >
         <div
@@ -39,7 +45,7 @@ export function SiteHeader() {
           )}
         >
           <nav aria-label="Main" className="hidden lg:block">
-            <NavLinks links={NAV_LEFT} />
+            <NavLinks links={NAV_LEFT} inverse={overDark} />
           </nav>
 
           <Link
@@ -50,7 +56,7 @@ export function SiteHeader() {
             className="justify-self-start lg:justify-self-center"
           >
             <Image
-              src={dark ? BRAND.logoLight : BRAND.logo}
+              src={dark || overDark ? BRAND.logoLight : BRAND.logo}
               alt={BRAND.name}
               width={1512}
               height={300}
@@ -61,13 +67,18 @@ export function SiteHeader() {
           </Link>
 
           <div className="flex items-center justify-end gap-2 lg:gap-6">
-            <NavLinks links={[{ label: "Contact", href: ROUTES.contact }]} className="hidden lg:flex" />
-            <ThemeToggle />
+            <NavLinks links={[{ label: "Contact", href: ROUTES.contact }]} className="hidden lg:flex" inverse={overDark} />
+            <ThemeToggle className={overDark ? "text-night-ink hover:bg-night-ink/10 hover:text-night-ink" : undefined} />
             <a
               href={WA.home}
               target="_blank"
               rel="noopener"
-              className="hidden h-10 items-center bg-ink px-5 text-[0.72rem] tracking-[0.18em] text-background uppercase transition-colors hover:bg-accent-deep lg:inline-flex dark:bg-night-ink dark:text-night"
+              className={cn(
+                "hidden h-10 items-center px-5 text-[0.72rem] tracking-[0.18em] uppercase transition-colors duration-500 lg:inline-flex",
+                overDark
+                  ? "bg-night-ink text-night hover:bg-primary hover:text-white"
+                  : "bg-ink text-background hover:bg-accent-deep dark:bg-night-ink dark:text-night",
+              )}
             >
               Enquire
             </a>
@@ -76,11 +87,11 @@ export function SiteHeader() {
               aria-expanded={open}
               aria-controls="mobile-menu"
               onClick={() => setOpen((value) => !value)}
-              className="flex h-10 items-center gap-2.5 pl-2 type-label text-ink lg:hidden"
+              className={cn("flex h-10 items-center gap-2.5 pl-2 type-label lg:hidden", overDark ? "text-night-ink" : "text-ink")}
             >
               <span aria-hidden className="relative block h-2.5 w-5">
-                <span className={cn("absolute left-0 h-px w-full bg-ink transition-transform duration-300", open ? "top-1 rotate-45" : "top-0")} />
-                <span className={cn("absolute left-0 h-px w-full bg-ink transition-transform duration-300", open ? "top-1 -rotate-45" : "top-2.5")} />
+                <span className={cn("absolute left-0 h-px w-full bg-current transition-transform duration-300", open ? "top-1 rotate-45" : "top-0")} />
+                <span className={cn("absolute left-0 h-px w-full bg-current transition-transform duration-300", open ? "top-1 -rotate-45" : "top-2.5")} />
               </span>
               {open ? "Close" : "Menu"}
             </button>
