@@ -4,7 +4,7 @@ Static marketing website for **Essentia — The Salon Lounge** (premium unisex s
 
 ## In scope
 
-- Marketing pages: Home, About, Services index, dynamic service categories, Packages, Contact, Privacy
+- Marketing pages: Home, About, Services index, dynamic service categories, Packages, Contact. Privacy policy is written but unpublished (`app/(site)/_privacy-policy`, no route, no links)
 - Service and package showcase from the Essentia menu (no prices)
 - Light and dark themes
 - Brand data from root `brand.json`

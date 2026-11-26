@@ -12,7 +12,9 @@ export const metadata: Metadata = pageMetadata({
   path: ROUTES.privacy,
 });
 
-// Brief §8.3. Every consent box links here. Mukta's lawyer checks the final wording.
+// Kept in the project but not on the website: the leading underscore makes this a Next.js private
+// folder, so it has no route. To publish it, rename the folder to `privacy-policy`, then re-add
+// ROUTES.privacy to app/sitemap.ts and a footer link in components/layout/SiteFooter.tsx.
 export default function PrivacyPolicyPage() {
   return (
     <>

@@ -10,7 +10,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
     ROUTES.services,
     ROUTES.packages,
     ROUTES.contact,
-    ROUTES.privacy,
     ...services.map((service) => servicePath(service.slug)),
   ];
   return pages.map((path) => ({ url: new URL(path, BRAND.url).toString() }));

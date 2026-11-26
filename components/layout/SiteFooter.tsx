@@ -2,7 +2,7 @@ import { cacheLife } from "next/cache";
 import Link from "next/link";
 import { Reveal } from "@/components/motion/Reveal";
 import { BRAND } from "@/constants/brand";
-import { FOOTER_LINKS, ROUTES, SERVICE_NAV } from "@/constants/routes";
+import { FOOTER_LINKS, SERVICE_NAV } from "@/constants/routes";
 import { WA } from "@/constants/whatsapp";
 
 async function currentYear() {
@@ -105,9 +105,6 @@ export async function SiteFooter() {
           <p className="m-0">
             &copy; {year} {BRAND.name}. {BRAND.disclaimer}
           </p>
-          <Link href={ROUTES.privacy} className={link}>
-            Privacy policy
-          </Link>
         </div>
       </div>
     </footer>
