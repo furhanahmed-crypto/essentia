@@ -16,7 +16,6 @@ const RATIO: Record<LookbookWeight, string> = {
   small: "aspect-square",
 };
 
-
 interface GalleryFrameProps {
   item: LookbookItem;
   position: number;
