@@ -16,6 +16,24 @@ const RATIO: Record<LookbookWeight, string> = {
   small: "aspect-square",
 };
 
+const arr = [
+  {
+    image: "/images/home/gallery/1.jpg",
+    alt: "Image 1",
+    caption: "Image 1",
+    service: "service1",
+    weight: "feature",
+    },
+
+  {
+    image: "/images/home/gallery/2.jpg",
+    alt: "Image 2",
+    caption: "Image 2",
+    service: "service2",
+    weight: "feature",
+  },
+]
+
 
 interface GalleryFrameProps {
   item: LookbookItem;
