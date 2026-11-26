@@ -60,13 +60,13 @@ export function ServiceTabs({ services, active, onSelect, variant, panelId }: Se
           >
             {vertical ? (
               <>
-                <span className={cn("type-kicker tabular-nums transition-colors", selected ? "text-em" : "text-night-ink/35")}>
+                <span className={cn("type-kicker tabular-nums transition-colors", selected ? "text-em" : "text-night-ink/60")}>
                   {indexOf(index + 1)}
                 </span>
                 <span
                   className={cn(
                     "font-heading text-[clamp(2rem,1rem+2.4vw,3.6rem)] leading-none tracking-tight transition-[color,transform] duration-500",
-                    selected ? "translate-x-2 text-night-ink" : "text-night-ink/30 group-hover:text-night-ink/60",
+                    selected ? "translate-x-2 text-night-ink" : "text-night-ink/55 group-hover:text-night-ink/85",
                   )}
                 >
                   {service.name}
@@ -80,7 +80,7 @@ export function ServiceTabs({ services, active, onSelect, variant, panelId }: Se
                 <span className={cn("relative block aspect-[3/4] overflow-hidden transition-opacity", selected ? "opacity-100" : "opacity-55")}>
                   <Image src={service.image} alt="" fill sizes="144px" className="object-cover" />
                 </span>
-                <span className={cn("mt-3 block font-heading text-xl", selected ? "text-night-ink" : "text-night-ink/55")}>
+                <span className={cn("mt-3 block font-heading text-xl", selected ? "text-night-ink" : "text-night-ink/70")}>
                   {service.name}
                 </span>
               </>

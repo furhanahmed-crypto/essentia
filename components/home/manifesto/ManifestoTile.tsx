@@ -24,7 +24,7 @@ export function ManifestoTile({ principle, position, total, className }: Manifes
     <Link
       href={principle.href}
       className={cn(
-        "manifesto-tile group relative isolate block min-h-[22rem] overflow-hidden bg-night text-night-ink outline-none focus-visible:ring-2 focus-visible:ring-night-ink focus-visible:ring-offset-4 focus-visible:ring-offset-background sm:min-h-0",
+        "tone-photo manifesto-tile group relative isolate block min-h-[22rem] overflow-hidden bg-night text-night-ink outline-none focus-visible:ring-2 focus-visible:ring-night-ink focus-visible:ring-offset-4 focus-visible:ring-offset-background sm:min-h-0",
         className,
       )}
     >

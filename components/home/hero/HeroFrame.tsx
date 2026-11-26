@@ -65,7 +65,7 @@ export function HeroFrame({ frame, slot, restSlot, priority = false, onSelect }:
             aria-label={isFront ? `${frame.title} — in front` : `Bring ${frame.title} to the front`}
             className={cn(
               "hero-print block w-full bg-cream p-[clamp(6px,0.7vw,11px)] pb-[clamp(30px,3.2vw,46px)] text-left outline outline-1 outline-offset-[clamp(5px,0.6vw,9px)] transition-[outline-color] duration-500 ease-[cubic-bezier(0.22,1,0.36,1)] focus-visible:outline-2 focus-visible:outline-primary dark:bg-night-ink",
-              "shadow-[0_60px_110px_-40px_rgba(0,0,0,0.9),0_22px_40px_-22px_rgba(0,0,0,0.65)]",
+              "shadow-[0_60px_110px_-40px_color-mix(in_srgb,var(--es-shadow)_90%,transparent),0_22px_40px_-22px_color-mix(in_srgb,var(--es-shadow)_65%,transparent)]",
               isFront ? "cursor-default outline-night-ink/40" : "cursor-pointer outline-night-ink/15 hover:outline-night-ink/45",
             )}
           >

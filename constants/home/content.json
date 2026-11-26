@@ -12,34 +12,34 @@
     },
     "frames": [
       {
-        "src": "/images/finishes/hair-caramel-balayage.jpg",
-        "alt": "Hands running through soft caramel balayage at the backwash chair",
-        "title": "Caramel balayage",
-        "label": "No. 04 — Caramel balayage"
+        "src": "/images/finishes/hair-layered-cut.jpg",
+        "alt": "Stylist lifting a soft layered cut to show its movement",
+        "title": "Layered cut",
+        "label": "No. 04 — Layered cut"
       },
       {
-        "src": "/images/finishes/hair-caramel-layers.jpg",
-        "alt": "Voluminous caramel layers fanned out after a blow-dry at Essentia",
-        "title": "Caramel layers",
-        "label": "No. 02 — Caramel layers"
+        "src": "/images/finishes/hair-voluminous-layers.jpg",
+        "alt": "Voluminous layers fanned out after a blow-dry at Essentia",
+        "title": "Voluminous layers",
+        "label": "No. 02 — Voluminous layers"
       },
       {
         "src": "/images/before-after/smoothing-01-after.jpg",
-        "alt": "Long dark hair smoothed to a glossy, straight finish at Essentia",
+        "alt": "Long hair smoothed to a glossy, straight finish at Essentia",
         "title": "Smoothing",
         "label": "No. 01 — Smoothing"
       },
       {
-        "src": "/images/finishes/hair-bronze-curls.jpg",
-        "alt": "Long hair finished in bouncy bronze-toned curls at Essentia",
-        "title": "Bronze curls",
-        "label": "No. 03 — Bronze curls"
+        "src": "/images/finishes/hair-soft-curls.jpg",
+        "alt": "Long hair finished in bouncy, defined curls at Essentia",
+        "title": "Soft curls",
+        "label": "No. 03 — Soft curls"
       },
       {
-        "src": "/images/finishes/hair-burgundy-layers.jpg",
-        "alt": "Layered cut with burgundy-tinted ends, styled with volume",
-        "title": "Burgundy layers",
-        "label": "No. 05 — Burgundy layers"
+        "src": "/images/finishes/hair-long-layers.jpg",
+        "alt": "Long layers styled with volume and movement",
+        "title": "Long layers",
+        "label": "No. 05 — Long layers"
       }
     ],
     "tagline": "Hair · Skin · Grooming · Nails · Makeup",
@@ -90,8 +90,8 @@
       },
       {
         "line": "for hair, skin & nails —",
-        "image": "/images/nails/gel-manicure-nude.jpg",
-        "imageAlt": "Nail technician finishing a glossy nude gel manicure at Essentia"
+        "image": "/images/nails/nail-art-glitter.jpg",
+        "imageAlt": "Hands showing a glossy manicure with glitter accents and gem detail"
       },
       {
         "line": "care that feels exceptional.",
@@ -129,8 +129,8 @@
   },
   "lookbook": {
     "label": "In the chair",
-    "title": "Recent finishes",
-    "lede": "Real finishes from the lounge — filmed in our chairs at Pillar No. 160.",
+    "title": "Recent works",
+    "lede": "Real work from the lounge — filmed in our chairs at Pillar No. 160.",
     "items": [
       {
         "video": "/videos/finishes/hair-layered-blowout.mp4",
@@ -141,26 +141,26 @@
         "weight": "feature"
       },
       {
-        "video": "/videos/finishes/nails-gel-manicure.mp4",
-        "image": "/images/finishes/nails-gel-manicure.jpg",
-        "alt": "Guest showing a deep plum gel manicure with an almond shape",
-        "caption": "Gel manicure",
+        "video": "/videos/finishes/nails-art-finish.mp4",
+        "image": "/images/finishes/nails-art-finish.jpg",
+        "alt": "Guest showing hand-finished nail art with fine gold detailing",
+        "caption": "Nail art",
         "service": "nail",
         "weight": "small"
       },
       {
-        "video": "/videos/finishes/hair-caramel-balayage.mp4",
-        "image": "/images/finishes/hair-caramel-balayage.jpg",
-        "alt": "Hands running through soft caramel balayage at the backwash chair",
-        "caption": "Caramel balayage",
+        "video": "/videos/finishes/hair-layered-cut.mp4",
+        "image": "/images/finishes/hair-layered-cut.jpg",
+        "alt": "Stylist lifting a soft layered cut to show its movement",
+        "caption": "Layered cut",
         "service": "hair",
         "weight": "tall"
       },
       {
-        "video": "/videos/finishes/hair-bronze-curls.mp4",
-        "image": "/images/finishes/hair-bronze-curls.jpg",
-        "alt": "Long hair finished in bouncy bronze-toned curls",
-        "caption": "Bronze curls",
+        "video": "/videos/finishes/hair-soft-curls.mp4",
+        "image": "/images/finishes/hair-soft-curls.jpg",
+        "alt": "Long hair finished in bouncy, defined curls",
+        "caption": "Soft curls",
         "service": "hair",
         "weight": "feature"
       },
@@ -173,26 +173,26 @@
         "weight": "small"
       },
       {
-        "video": "/videos/finishes/hair-caramel-layers.mp4",
-        "image": "/images/finishes/hair-caramel-layers.jpg",
-        "alt": "Voluminous caramel layers fanned out after a blow-dry",
-        "caption": "Caramel layers",
+        "video": "/videos/finishes/hair-voluminous-layers.mp4",
+        "image": "/images/finishes/hair-voluminous-layers.jpg",
+        "alt": "Voluminous layers fanned out after a blow-dry",
+        "caption": "Voluminous layers",
         "service": "hair",
         "weight": "tall"
       },
       {
-        "video": "/videos/finishes/hair-burgundy-layers.mp4",
-        "image": "/images/finishes/hair-burgundy-layers.jpg",
-        "alt": "Layered cut with burgundy-tinted ends, styled with volume",
-        "caption": "Burgundy layers",
+        "video": "/videos/finishes/hair-long-layers.mp4",
+        "image": "/images/finishes/hair-long-layers.jpg",
+        "alt": "Long layers styled with volume and movement",
+        "caption": "Long layers",
         "service": "hair",
         "weight": "small"
       },
       {
-        "video": "/videos/finishes/hair-caramel-ombre.mp4",
-        "image": "/images/finishes/hair-caramel-ombre.jpg",
-        "alt": "Shoulder-length layers with a caramel ombré, finished with a round brush",
-        "caption": "Caramel ombré",
+        "video": "/videos/finishes/hair-colour-finish.mp4",
+        "image": "/images/finishes/hair-colour-finish.jpg",
+        "alt": "Shoulder-length layers with a colour finish, styled with a round brush",
+        "caption": "Hair colour",
         "service": "hair",
         "weight": "tall"
       }
@@ -292,7 +292,7 @@
         "word": "Lounge.",
         "title": "Lounge atmosphere",
         "text": "Bright mirrors, soft seating and a pace that never feels rushed.",
-        "image": "/images/finishes/hair-caramel-layers.jpg",
+        "image": "/images/finishes/hair-voluminous-layers.jpg",
         "imageAlt": "Styling chair and arched mirrors in the Essentia lounge behind a fresh blow-dry",
         "href": "/about"
       }
@@ -362,8 +362,8 @@
         "quote": "The space feels premium without being stiff — my colour came out exactly as we discussed.",
         "name": "A regular guest",
         "role": "Hair colour",
-        "image": "/images/finishes/hair-caramel-balayage.jpg",
-        "imageAlt": "Soft caramel balayage finished at Essentia"
+        "image": "/images/finishes/hair-layered-cut.jpg",
+        "imageAlt": "Soft layered cut finished at Essentia"
       },
       {
         "quote": "Pre-bridal sessions were paced perfectly. The team kept everything organised and calm.",
@@ -390,15 +390,15 @@
         "quote": "Gel polish and nail art held through a long wedding week. Precise work, lovely finish.",
         "name": "Nail art guest",
         "role": "Nail extensions",
-        "image": "/images/finishes/nails-gel-manicure.jpg",
-        "imageAlt": "Plum gel manicure finished at Essentia"
+        "image": "/images/finishes/nails-art-finish.jpg",
+        "imageAlt": "Nail art finished at Essentia"
       },
       {
         "quote": "Party makeup stayed soft on camera and comfortable through the evening. Will be back.",
         "name": "Makeup guest",
         "role": "Party makeup",
         "image": "/images/notes/party.jpg",
-        "imageAlt": "Close-up of luminous party makeup with a matte rose lip"
+        "imageAlt": "Close-up of luminous party makeup with a soft, polished finish"
       }
     ]
   },

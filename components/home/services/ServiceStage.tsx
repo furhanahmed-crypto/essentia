@@ -40,7 +40,7 @@ export function ServiceStage() {
           </Link>
         </div>
 
-        <div className="relative hidden h-[min(80svh,48rem)] overflow-hidden lg:col-span-7 lg:block">
+        <div className="tone-photo relative hidden h-[min(80svh,48rem)] overflow-hidden lg:col-span-7 lg:block">
           {SERVICES.map((item, index) => (
             <div key={item.slug} data-state={layerState(index)} className="stage-layer absolute inset-0">
               <div className="absolute inset-0">

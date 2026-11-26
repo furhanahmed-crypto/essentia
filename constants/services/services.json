@@ -4,11 +4,11 @@
     "name": "Hair",
     "short": "Hair",
     "summary": "Cuts, colour, styling, spa and advanced treatments for women and men — finished with care in our Attapur lounge.",
-    "about": "From everyday cuts to balayage, Olaplex and Nanoplastia, our hair studio balances classic craft with modern care. Whether you need a quick blast dry or a full colour transformation, we tailor every visit to your hair and lifestyle.",
+    "about": "From everyday cuts to colour, Olaplex and Nanoplastia, our hair studio balances classic craft with modern care. Whether you need a quick blast dry or a full colour transformation, we tailor every visit to your hair and lifestyle.",
     "image": "/images/salon/blowdry-finish.jpg",
-    "image_secondary": "/images/finishes/hair-caramel-balayage.jpg",
-    "imageAlt": "Long dark hair blow-dried to a glossy finish in an Essentia styling chair",
-    "imageSecondaryAlt": "Soft caramel balayage finished at Essentia",
+    "image_secondary": "/images/finishes/hair-layered-cut.jpg",
+    "imageAlt": "Long hair blow-dried to a glossy finish in an Essentia styling chair",
+    "imageSecondaryAlt": "Soft layered cut finished at Essentia",
     "seoTitle": "Hair Services | Essentia — The Salon Lounge",
     "seoDescription": "Women’s and men’s haircuts, colour, styling, spa and advanced treatments at Essentia — The Salon Lounge, Attapur.",
     "groups": [
@@ -43,9 +43,7 @@
           "Ammonia Free Global Colour (Basic)",
           "Global Fashion Colour",
           "Full Highlights",
-          "Per Streak",
-          "Balayage",
-          "Ombre"
+          "Per Streak"
         ]
       },
       {
@@ -279,10 +277,10 @@
     "short": "Nail",
     "summary": "Cut & file, gel polish, art and extensions — polished finishes for fingers and toes.",
     "about": "Our nail desk covers everyday maintenance through bridal-ready art and extensions. Choose gel polish, chrome and cateye finishes, acrylic or poly gel — finished with care.",
-    "image": "/images/nails/gel-manicure-nude.jpg",
-    "image_secondary": "/images/finishes/nails-gel-manicure.jpg",
-    "imageAlt": "Glossy nude gel manicure being finished at Essentia",
-    "imageSecondaryAlt": "Plum gel manicure with an almond shape",
+    "image": "/images/nails/nail-art-glitter.jpg",
+    "image_secondary": "/images/finishes/nails-art-finish.jpg",
+    "imageAlt": "Glossy manicure with glitter accents finished at Essentia",
+    "imageSecondaryAlt": "Nail art with fine gold detailing",
     "seoTitle": "Nail Services | Essentia — The Salon Lounge",
     "seoDescription": "Gel polish, nail art and extensions at Essentia — The Salon Lounge, Attapur.",
     "groups": [

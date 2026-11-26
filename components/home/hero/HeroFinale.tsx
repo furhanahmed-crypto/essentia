@@ -50,7 +50,7 @@ export function HeroFinale({ frames, kicker, primary, secondary, facts, cue }: H
               className={cn("hero-scatter absolute w-[clamp(4.25rem,8.5vw,8.5rem)]", low && "max-sm:!hidden")}
               style={{ ...position, rotate: `${rotate}deg` }}
             >
-              <div className="bg-cream p-1.5 pb-4 shadow-[0_30px_60px_-28px_rgba(0,0,0,0.85)] dark:bg-night-ink">
+              <div className="bg-cream p-1.5 pb-4 shadow-[0_30px_60px_-28px_color-mix(in_srgb,var(--es-shadow)_85%,transparent)] dark:bg-night-ink">
                 <div className="relative aspect-[2/3] overflow-hidden">
                   <Image src={frame.src} alt="" fill sizes="140px" className="object-cover" />
                   <span className="absolute inset-0 bg-night/35" />

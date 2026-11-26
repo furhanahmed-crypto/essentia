@@ -22,8 +22,8 @@ function seeded(seed: number): () => number {
 const round = (value: number, digits = 2) => Number(value.toFixed(digits));
 const between = (random: () => number, min: number, max: number) => min + random() * (max - min);
 
-/** Star tints: mostly the cream ink, a few pale-sage and warm ones for depth. */
-const TINTS = ["var(--es-night-ink)", "var(--es-night-ink)", "var(--es-night-ink)", "var(--es-mist)", "#f5e6cf"] as const;
+/** Star tints: mostly the warm-white glow, a few pale-sage and warm ones for depth. */
+const TINTS = ["var(--es-night-glow)", "var(--es-night-glow)", "var(--es-night-glow)", "var(--es-mist)", "#f5e6cf"] as const;
 
 export type SkyDepth = "far" | "mid" | "near";
 

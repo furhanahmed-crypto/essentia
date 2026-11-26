@@ -14,7 +14,7 @@ export function Occasions() {
 
   return (
     <section aria-labelledby="occasions-title" className="band-night relative">
-      <div className="pointer-events-none absolute inset-x-0 top-0 z-10 flex flex-col items-center gap-3 bg-gradient-to-b from-night/75 to-transparent px-[var(--es-gutter)] pt-10 pb-20 text-center lg:pt-12">
+      <div className="tone-photo pointer-events-none absolute inset-x-0 top-0 z-10 flex flex-col items-center gap-3 bg-gradient-to-b from-night/75 to-transparent px-[var(--es-gutter)] pt-10 pb-20 text-center lg:pt-12">
         <p className="m-0 type-kicker tracking-[0.18em] text-night-ink/75 uppercase">{occasions.label}</p>
         <h2 id="occasions-title" className="m-0 max-w-xl font-heading text-2xl leading-tight text-night-ink italic md:text-3xl">
           {occasions.title}

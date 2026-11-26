@@ -15,7 +15,7 @@ export function OccasionPanel({ side, pkg }: OccasionPanelProps) {
   return (
     <article
       aria-label={pkg.name}
-      className="group/panel relative isolate flex h-[88svh] min-h-[34rem] flex-col justify-end overflow-hidden text-night-ink lg:h-full lg:min-h-0 lg:flex-1 lg:transition-[flex-grow] lg:duration-700 lg:ease-[cubic-bezier(0.77,0,0.175,1)] lg:hover:grow-[1.9] lg:focus-within:grow-[1.9]"
+      className="tone-photo group/panel relative isolate flex h-[88svh] min-h-[34rem] flex-col justify-end overflow-hidden text-night-ink lg:h-full lg:min-h-0 lg:flex-1 lg:transition-[flex-grow] lg:duration-700 lg:ease-[cubic-bezier(0.77,0,0.175,1)] lg:hover:grow-[1.9] lg:focus-within:grow-[1.9]"
     >
       <Image
         src={side.image}

@@ -11,27 +11,30 @@ section has its own layout, ground, image treatment, type scale and motion, and 
 repeats back to back: cinematic, then pinned, then interactive, then gallery, then full-bleed
 photography, then pure type.
 
-Tone: premium beauty, calm expertise, contrast between charcoal, sage and cream. The italic
+Tone: premium beauty, calm expertise, contrast between brand green, ink and cream. The italic
 sage word, the small uppercase label and the hairline divider are retired as defaults — each
 appears at most a couple of times on the page.
 
 ## Palette (tokens are immutable)
 
-The colour tokens in `app/globals.css` (`:root` / `.dark` HSL variables, `--er-*` aliases,
-`--es-*` editorial layer, `band-night`) must not be changed, renamed or regenerated. Sections
-only combine them differently.
+The brand colour tokens in `app/globals.css` (`:root` / `.dark` HSL variables, `--er-*` aliases)
+must not be changed, renamed or regenerated. The client asked for the former charcoal bands to
+use the brand green, so only the `--es-night*` editorial tokens were re-pointed to it. Light mode
+is the default for everyone (`ThemeProvider`, `storageKey="essentia-theme"`, no system theme).
 
 | Token | Hex | Used as |
 | --- | --- | --- |
 | Warm Ivory | `#EEEAE4` | Page ground (`bg-background`) — story |
 | Soft Cream | `#F8F6F2` | Raised ground (`bg-card`) — gallery, FAQ |
 | Pale Sage | `#D8E3DC` | `bg-mist` — image placeholders only; never a section ground |
-| Muted Sage | `#79A797` | `bg-primary` — accents only (hover fills, rules, dots, the hero bloom); never a section ground |
+| Muted Sage | `#79A797` | `bg-primary` — accents, and the ground of every night band (`--es-night`) |
 | Deep Sage | `#5F8A7B` | `accent-deep` — accessible sage text, small marks |
-| Charcoal | `#343330` | Ink, and the night bands — hero, services, packages, testimonials, footer |
+| Charcoal | `#343330` | Ink on ivory and cream grounds |
+| Night ink | `#151C19` | Text on the green night bands in light mode (`--es-night-ink`, muted `#1F3329`, emphasis `#0F3A2C`) |
 
-Sections never sit on a green ground: grounds are only `bg-background`, `bg-card` or the night
-band. Sage stays an accent colour.
+Grounds are `bg-background`, `bg-card` or the green night band. In dark mode the night band is a
+deep green mixed from the brand green with cream ink. Text set over photography uses `tone-photo`
+(deep green scrim, light ink) so it stays legible on either theme.
 
 Home rhythm: **night hero** → ivory story → **night services** → cream gallery → **photo split** →
 ivory bento → cream journey → **night notes** → cream FAQ → ivory finale → **night footer**.
@@ -51,7 +54,7 @@ The older `type-display / title / heading / label / lede` remain for the inner p
 - Mixed shapes with intent: full-bleed photography, tilted frames, the arch (the lounge mirror)
   and a glowing circle in the journey, round seal CTAs.
 - Buttons: pills and round seals on the home page (`rounded-full`), solid charcoal or sage.
-- Text over photography always sits on `scrim-night` (a gradient built from `--es-night`).
+- Text over photography always sits on `scrim-night` inside a `tone-photo` wrapper (a deep green gradient with light ink).
 
 ## Motion
 
@@ -164,9 +167,9 @@ client has not supplied yet (makeup, bridal, grooming, products).
 | Folder | Contents | Used in |
 | --- | --- | --- |
 | `public/images/salon/` | `blowdry-finish.jpg` — the lounge, real guest | Hero, Hair chapter |
-| `public/images/nails/` | `gel-manicure-nude.jpg` | Story, Nail chapter |
+| `public/images/nails/` | `nail-art-glitter.jpg` | Story, Nail chapter |
 | `public/images/finishes/` | Poster frames for each reel (same names as the videos) | Gallery posters, hero inset, bento, notes, chapter collages |
-| `public/videos/finishes/` | 8 client reels: `hair-*`, `nails-gel-manicure`, `skin-mens-facial` (H.264, 540×960, muted loop) | Gallery ("Recent finishes") |
+| `public/videos/finishes/` | 8 client reels: `hair-*`, `nails-art-finish`, `skin-mens-facial` (H.264, 540×960, muted loop) | Gallery ("Recent works") |
 | `public/images/before-after/` | `smoothing-NN-before.jpg` / `smoothing-NN-after.jpg`, cropped from the client's side-by-side collages and matched in size | Before & after section (home, Hair chapter) |
 
 Adding media: name files `<service>-<look>` in kebab case; convert `.mov` with
@@ -182,3 +185,10 @@ Adding media: name files `<service>-<look>` in kebab case; convert `.mov` with
 
 Transparent horizontal mark: `public/images/logo/logo-horizontal-dark.png` (light ground) and
 `logo-horizontal.png` (dark ground). Processed via `scripts/process-logo.py`.
+
+## Naming works and photos
+
+Never name a work after a colour shade (burgundy, caramel, brown, plum, nude) or a technique that
+varies from guest to guest (balayage, ombre). Use plain descriptive names: Layered cut, Voluminous
+layers, Long layers, Soft curls, Layered blowout, Hair colour, Smoothing, Nail art, Men's facial.
+Alt text describes the work, not the shade. File names follow the same rule.

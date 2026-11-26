@@ -94,9 +94,16 @@
   --sidebar-ring: var(--er-color-primary);
 
   /* Essentia editorial layer (docs/DESIGN.md) */
-  --es-night: #343330;
-  --es-night-ink: #f3efe8;
-  --es-night-muted: #bdb8ae;
+  /* Brand-green bands: the primary green carries dark ink in light mode. */
+  --es-night: var(--er-color-primary);
+  --es-night-ink: #151c19;
+  --es-night-muted: #1f3329;
+  --es-night-em: #0f3a2c;
+  --es-night-line: rgba(21, 28, 25, 0.22);
+  /* Effects on night bands: shadows sink into deep brand green (never black) in light mode; light
+     (key light, beams, stars) is warm white in both themes. */
+  --es-shadow: rgb(18 46 36 / 0.62);
+  --es-night-glow: #fbf9f4;
   --es-mist: #d8e3dc;
   --es-line: rgba(52, 51, 48, 0.16);
   --es-em: #5f8a7b;
@@ -148,9 +155,13 @@
   --er-color-chevron: #2a3330;
   --er-shadow: 0 18px 50px rgba(0, 0, 0, 0.35);
 
-  --es-night: #0c0f0e;
+  --es-night: color-mix(in srgb, var(--er-color-primary) 30%, #0c0f0e);
   --es-night-ink: #f3f0ea;
-  --es-night-muted: #a9b0ac;
+  --es-night-muted: #bccbc4;
+  --es-night-em: #a8cfc0;
+  --es-night-line: rgba(243, 239, 232, 0.16);
+  --es-shadow: rgb(0 0 0);
+  --es-night-glow: #f3f0ea;
   --es-mist: #1c2522;
   --es-line: rgba(243, 240, 234, 0.14);
   --es-em: #9cc7b7;
@@ -731,12 +742,12 @@
   margin-inline: auto;
 }
 
-/* Night bands re-point the emphasis colour so italic words stay legible on charcoal. */
+/* Night bands re-point the emphasis colour so italic words stay legible on brand green. */
 @utility band-night {
   background-color: var(--es-night);
   color: var(--es-night-ink);
-  --es-em: #a8cfc0;
-  --es-line: rgba(243, 239, 232, 0.16);
+  --es-em: var(--es-night-em);
+  --es-line: var(--es-night-line);
 }
 
 @utility type-display {
@@ -812,7 +823,15 @@
   letter-spacing: 0.04em;
 }
 
-/* Text set over photography: a soft charcoal scrim built from the night token. */
+/* Text set over photography reads best as light ink on a deep brand-green scrim, so this re-points the night tokens locally. */
+@utility tone-photo {
+  --es-night: #12241d;
+  --es-night-ink: #f6f2ea;
+  --es-night-muted: #cfe0d8;
+  color: var(--es-night-ink);
+}
+
+/* Text set over photography: a soft scrim built from the night token (use with tone-photo). */
 @utility scrim-night {
   background-image: linear-gradient(
     to top,
@@ -1094,8 +1113,8 @@
 .hero-twinkle {
   background: radial-gradient(
     circle,
-    var(--es-night-ink) 0 28%,
-    color-mix(in srgb, var(--es-night-ink) 35%, transparent) 45%,
+    var(--es-night-glow) 0 28%,
+    color-mix(in srgb, var(--es-night-glow) 35%, transparent) 45%,
     transparent 70%
   );
   animation: hero-twinkle var(--tw-s, 7s) ease-in-out var(--tw-delay, 0s) infinite;
@@ -1115,9 +1134,9 @@
 }
 .hero-glint {
   background:
-    linear-gradient(to right, transparent, color-mix(in srgb, var(--es-night-ink) 45%, transparent) 50%, transparent) center / 100% 1px no-repeat,
-    linear-gradient(to bottom, transparent, color-mix(in srgb, var(--es-night-ink) 45%, transparent) 50%, transparent) center / 1px 100% no-repeat,
-    radial-gradient(circle, var(--es-night-ink) 0 9%, color-mix(in srgb, var(--es-night-ink) 30%, transparent) 20%, transparent 55%);
+    linear-gradient(to right, transparent, color-mix(in srgb, var(--es-night-glow) 45%, transparent) 50%, transparent) center / 100% 1px no-repeat,
+    linear-gradient(to bottom, transparent, color-mix(in srgb, var(--es-night-glow) 45%, transparent) 50%, transparent) center / 1px 100% no-repeat,
+    radial-gradient(circle, var(--es-night-glow) 0 9%, color-mix(in srgb, var(--es-night-glow) 30%, transparent) 20%, transparent 55%);
   transform: translate(-50%, -50%) scale(0.7);
   opacity: 0.4;
   animation: hero-glint var(--tw-s, 15s) ease-in-out var(--tw-delay, 0s) infinite;

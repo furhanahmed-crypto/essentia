@@ -65,7 +65,7 @@ export function HeroSky() {
     >
       <div className="hero-bg-rim absolute inset-0 bg-[radial-gradient(ellipse_55%_60%_at_6%_96%,color-mix(in_srgb,var(--color-primary)_26%,transparent),transparent_70%),radial-gradient(ellipse_45%_50%_at_96%_4%,color-mix(in_srgb,var(--es-mist)_12%,transparent),transparent_70%)]" />
       <div className="absolute inset-0 bg-[radial-gradient(ellipse_38%_30%_at_24%_28%,color-mix(in_srgb,var(--es-mist)_5%,transparent),transparent_70%),radial-gradient(ellipse_34%_28%_at_78%_70%,color-mix(in_srgb,var(--color-primary)_7%,transparent),transparent_72%)]" />
-      <div className="hero-bg-beams absolute inset-[-20%] bg-[linear-gradient(112deg,transparent_34%,color-mix(in_srgb,var(--es-night-ink)_5%,transparent)_40%,transparent_47%,transparent_55%,color-mix(in_srgb,var(--es-night-ink)_4%,transparent)_60%,transparent_66%)]" />
+      <div className="hero-bg-beams absolute inset-[-20%] bg-[linear-gradient(112deg,transparent_34%,color-mix(in_srgb,var(--es-night-glow)_5%,transparent)_40%,transparent_47%,transparent_55%,color-mix(in_srgb,var(--es-night-glow)_4%,transparent)_60%,transparent_66%)]" />
 
       {DEPTHS.map(({ depth, parallax, drift, flow }) => {
         const [, tileHeight] = fieldTile(depth);
@@ -150,7 +150,7 @@ export function HeroSky() {
       </div>
 
       <div className="hero-grain absolute inset-0 opacity-[0.07]" />
-      <div className="absolute inset-0 bg-[radial-gradient(ellipse_75%_70%_at_50%_45%,transparent_55%,color-mix(in_srgb,var(--es-night)_92%,black)_100%)]" />
+      <div className="absolute inset-0 bg-[radial-gradient(ellipse_75%_70%_at_50%_45%,transparent_55%,color-mix(in_srgb,var(--es-night)_80%,var(--es-shadow))_100%)]" />
     </div>
   );
 }

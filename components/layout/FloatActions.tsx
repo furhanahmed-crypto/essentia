@@ -36,7 +36,7 @@ export function FloatActions() {
         target="_blank"
         rel="noopener"
         aria-label="Chat on WhatsApp"
-        className="group fixed right-6 bottom-6 z-40 hidden h-14 items-center overflow-hidden bg-whatsapp text-white shadow-[0_18px_40px_-18px_rgba(0,0,0,0.5)] lg:flex"
+        className="group fixed right-6 bottom-6 z-40 hidden h-14 items-center overflow-hidden bg-whatsapp text-white shadow-[0_18px_40px_-18px_color-mix(in_srgb,var(--es-shadow)_50%,transparent)] lg:flex"
       >
         <span className="grid size-14 place-items-center text-2xl">
           <Icon icon={faWhatsapp} />
