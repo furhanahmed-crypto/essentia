@@ -22,7 +22,6 @@ interface GalleryFrameProps {
   className?: string;
 }
 
-
 export function GalleryFrame({ item, position, className }: GalleryFrameProps) {
   const video = useInViewVideo();
 
